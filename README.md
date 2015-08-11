@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/BrandyMint/kiosk-landing-static.svg?branch=master)](https://travis-ci.org/BrandyMint/kiosk-landing-static)
+[![Build Status](https://travis-ci.org/BrandyMint/kiosk-system-static.svg?branch=master)](https://travis-ci.org/BrandyMint/kiosk-system-static)
 
 Установка и настройка
 ---------------------
