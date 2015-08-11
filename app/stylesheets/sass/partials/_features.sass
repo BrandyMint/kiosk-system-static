@@ -1,23 +1,23 @@
-%kiosklanding-feature-icon
+%feature-icon
   display: inline-block
   background-repeat: no-repeat
 
-.kiosklanding-features
+.features
   a
     color: inherit
   & > .container
     padding-top: 40px
     padding-bottom: 40px
 
-.kiosklanding-features-text
+.features-text
   margin-bottom: 0
 
-.kiosklanding-features-list
+.features-list
   padding:
     top: 30px
     bottom: 30px
 
-.kiosklanding-feature
+.features-item
   margin:
     top: 35px
     bottom: 35px
@@ -29,47 +29,47 @@
     font-size: 20px
     line-height: 1.15em
 
-.kiosklanding-feature-figure
+.features-item-figure
   width: 100%
   margin-top: -130px
   position: relative
   float: left
 
-.kiosklanding-feature-icon-design
-  @extend %kiosklanding-feature-icon
+.features-item-icon-design
+  @extend %feature-icon
   @include img-retina("#{$images-path}/features/design.png", "#{$images-path}/features/design@2x.png", 96px, 110px)
   width: 96px
   height: 110px
 
-.kiosklanding-feature-icon-cards
-  @extend %kiosklanding-feature-icon
+.features-item-icon-cards
+  @extend %feature-icon
   @include img-retina("#{$images-path}/features/cards.png", "#{$images-path}/features/cards@2x.png", 124px, 89px)
   width: 124px
   height: 89px
 
-.kiosklanding-feature-icon-mobile
-  @extend %kiosklanding-feature-icon
+.features-item-icon-mobile
+  @extend %feature-icon
   @include img-retina("#{$images-path}/features/mobile.png", "#{$images-path}/features/mobile@2x.png", 103px, 108px)
   width: 103px
   height: 108px
 
-.kiosklanding-feature-icon-orders
-  @extend %kiosklanding-feature-icon
+.features-item-icon-orders
+  @extend %feature-icon
   @include img-retina("#{$images-path}/features/orders.png", "#{$images-path}/features/orders@2x.png", 106px, 94px)
   width: 106px
   height: 94px
 
 @media (min-width: $screen-sm-min)
-  .kiosklanding-feature
+  .features-item
     text-align: left
 
 @media (max-width: $screen-xs-max)
-  .kiosklanding-features-list
+  .features-list
     padding:
       top: 0
       bottom: 20px
 
-  .kiosklanding-feature
+  .features-item
     margin:
       top: 10px
       bottom: 10px
@@ -81,10 +81,9 @@
       margin-top: 24px
       display: inline-block
       background-color: #555
-      // border-radius: 50%
       transform: rotate(45deg)
 
-  .kiosklanding-feature-figure
+  .features-item-figure
     margin:
       top: -80px
       bottom: -10px

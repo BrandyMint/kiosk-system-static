@@ -1,0 +1,74 @@
+.form-title
+  margin:
+    top: 0;
+    bottom: 1em;
+  font-weight: 100;
+  line-height: 1.1;
+  small
+    font-size: 14px
+
+.form-control
+  @include placeholder(#aeaeae)
+  font-size: 15px
+  box-shadow: none !important
+  appearance: none
+  &:focus
+    position: relative
+
+
+// Flatbox Style Form
+.form-flatbox
+  text-align: center
+
+  .alert
+    margin-bottom: 50px
+    border-color: $alert-danger-bg
+    background: none
+    color: $alert-danger-bg
+    a
+      font-weight: bold
+      color: inherit
+
+  .form-note
+    margin-bottom: 35px
+
+  .form-group
+    margin-bottom: -1px
+
+  .form-group-first
+    .form-control
+      border-top-right-radius: $border-radius-base
+      border-top-left-radius: $border-radius-base
+
+  .form-group-last
+    margin-bottom: 0
+    .form-control,
+    .btn
+      border-bottom-right-radius: $border-radius-base
+      border-bottom-left-radius: $border-radius-base
+
+  .form-control
+    border-radius: 0
+
+  .has-error
+    .form-control
+      @include placeholder($brand-danger)
+      border-color: $brand-danger
+      background-color: #fff8f8
+    .help-block
+      margin: 0
+      padding: .5em
+      position: relative
+      background-color: $brand-danger
+      color: #fff
+      font-size: .857em
+      a
+        font-weight: bold
+        color: inherit
+
+  .btn
+    border-radius: 0
+
+  .form-flatbox-links
+    p
+      margin-top: 20px

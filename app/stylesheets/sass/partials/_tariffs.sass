@@ -1,17 +1,17 @@
-.kiosklanding-tariffs
+.tariffs
   background-color: #eee
   & > .container
     padding:
       top: 50px
       bottom: 25px
-  .kiosklanding-section-title
+  .section-title
     margin-bottom: 1em
 
-.kiosklanding-tariffs-text
+.tariffs-text
   margin-bottom: 0
   font-size: 15px
 
-.kiosklanding-tariff
+.tariff
   margin-bottom: 36px
   padding: 26px
   background-color: #fff
@@ -23,22 +23,22 @@
   &:hover
     transform: scale(1.04)
 
-.kiosklanding-tariff-1
+.tariff-1
   border-top: 6px solid #ade9cd
-.kiosklanding-tariff-2
+.tariff-2
   border-top: 6px solid #90e1bc
-.kiosklanding-tariff-3
+.tariff-3
   border-top: 6px solid #6ed9a8
-.kiosklanding-tariff-4
+.tariff-4
   border-top: 6px solid #31c983
 
-.kiosklanding-tariffs-icon-tick
+.tariff-icon-tick
   width: 14px
   height: 10px
   display: inline-block
   @include img-retina("#{$images-path}/tariffs/tick.png", "#{$images-path}/tariffs/tick@2x.png", 14px, 10px)
 
-.kiosklanding-tariff-title
+.tariff-title
   margin:
     top: 0
     bottom: 16px
@@ -46,7 +46,7 @@
   font-size: 22px
   line-height: 24px
 
-.kiosklanding-tariff-price
+.tariff-price
   margin-bottom: 16px
   font-weight: 100
   font-size: 34px
@@ -64,12 +64,12 @@
       left: -18px
     &.after
       margin-left: -6px
-  & + .kiosklanding-tariff-bonus
+  & + .tariff-bonus
     margin:
       top: -8px
       bottom: 16px
 
-.kiosklanding-tariff-bonus-label
+.tariff-bonus-label
   padding: .3em .6em
   display: inline-block
   border: 1px solid #fff8ee
@@ -83,7 +83,7 @@
   white-space: nowrap
   border-radius: 2px
 
-.kiosklanding-tariff-features
+.tariff-features
   margin: 0
   padding: 0
   line-height: 1.571em
@@ -103,14 +103,14 @@
       background: none
 
 // Table
-.kiosklanding-tariffs-table-wrapper
+.tariffs-table-wrapper
   width: 100%
   overflow-y: hidden
   overflow-x: auto
   -webkit-overflow-scrolling: touch
   -ms-overflow-style: -ms-autohiding-scrollbar
 
-.kiosklanding-tariffs-table
+.tariffs-table
   width: 100%
   font-size: 12px
 
@@ -133,7 +133,7 @@
       font-size: 12px
       color: #777
 
-  .kiosklanding-tariff-price
+  .tariff-price
     padding-top: 10px
     padding-bottom: 10px
     margin-bottom: 0
@@ -148,7 +148,7 @@
       line-height: 1
       vertical-align: top
 
-.kiosklanding-tariffs-table-subtitle
+.tariffs-table-subtitle
   th
     font-size: 10px
     border-bottom: none
@@ -157,49 +157,49 @@
 
 // Media Queries
 @media (max-width: $screen-xs-max)
-  .kiosklanding-tariffs-table
+  .tariffs-table
     td
       &:first-child
         font-size: .857em
 
 @media (min-width: $screen-sm-min)
-  .kiosklanding-tariff
+  .tariff
     padding:
       right: 40px
       left: 40px
-  .kiosklanding-tariff-title,
-  .kiosklanding-tariff-price
+  .tariff-title,
+  .tariff-price
     margin-bottom: 30px
-  .kiosklanding-tariff-price
+  .tariff-price
     font-size: 64px
     sup
       top: .4em
       &.before
         left: -24px
-    & + .kiosklanding-tariff-bonus
+    & + .tariff-bonus
       margin:
         top: -20px
         bottom: 30px
-  .kiosklanding-tariffs-table
+  .tariffs-table
     td
       min-width: 140px
 
 @media (min-width: $screen-lg-min)
-  .kiosklanding-tariff
+  .tariff
     padding:
       right: 26px
       left: 26px
-  .kiosklanding-tariff-title
+  .tariff-title
     font-size: 1.286em
-  .kiosklanding-tariff-title,
-  .kiosklanding-tariff-price
+  .tariff-title,
+  .tariff-price
     margin-bottom: 30px
-  .kiosklanding-tariff-price
+  .tariff-price
     font-size: 42px
     sup
       top: .1em
 
-  .kiosklanding-tariffs-table
+  .tariffs-table
     font-size: 1em
     td
       min-width: 198px

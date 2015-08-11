@@ -1,0 +1,97 @@
+.btn
+  @include button-size($padding-base-vertical, $padding-base-horizontal, 15px, $line-height-base, $border-radius-base)
+
+.btn-lg
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large)
+
+.btn-sm
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small)
+
+.btn-xs
+  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small)
+
+
+.btn-outline
+  background: none
+  background-color: rgba(255, 255, 255, 0)
+
+  &.btn-default
+    &:hover,
+    &:active,
+    &:focus
+      background: none
+
+  &.btn-primary
+    color: $brand-primary
+
+  &.btn-success
+    color: $brand-success
+
+  &.btn-info
+    color: $brand-info
+
+  &.btn-warning
+    color: $brand-warning
+
+  &.btn-danger
+    color: $brand-danger
+
+
+.btn-primary
+  &:hover,
+  &:active,
+  &:focus
+    border-color: lighten($btn-primary-bg, 4%)
+    background-color: lighten($btn-primary-bg, 4%)
+    color: #fff
+
+.btn-success
+  &:hover,
+  &:active,
+  &:focus
+    border-color: lighten($btn-success-bg, 4%)
+    background-color: lighten($btn-success-bg, 4%)
+    color: #fff
+
+.btn-info
+  &:hover,
+  &:active,
+  &:focus
+    background-color: lighten($brand-info, 4%)
+    border-color: lighten($brand-info, 4%)
+    color: #fff
+
+.btn-warning
+  &:hover,
+  &:active,
+  &:focus
+    background-color: lighten($brand-warning, 4%)
+    border-color: lighten($brand-warning, 4%)
+    color: #fff
+
+.btn-danger
+  &:hover,
+  &:active,
+  &:focus
+    background-color: lighten($brand-danger, 4%)
+    border-color: lighten($brand-danger, 4%)
+    color: #fff
+
+
+.btn-border-2x
+  border-width: 2px
+  &.btn
+    padding-top: $padding-base-vertical - 1
+    padding-bottom: $padding-base-vertical - 1
+
+  &.btn-lg
+    padding-top: $padding-large-vertical - 1
+    padding-bottom: $padding-large-vertical - 1
+
+  &.btn-sm
+    padding-top: $padding-small-vertical - 1
+    padding-bottom: $padding-small-vertical - 1
+
+  &.btn-xs
+    padding-top: $padding-xs-vertical - 1
+    padding-bottom: $padding-xs-vertical - 1
