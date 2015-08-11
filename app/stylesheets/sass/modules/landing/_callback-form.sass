@@ -1,0 +1,44 @@
+%kiosklanding-callback-form-message
+  margin: 1em 0
+  font-size: 16px
+
+.kiosklanding-callback-form-form
+  @include clearfix
+  width: 100%
+  max-width: 360px
+  display: inline-block
+  position: relative
+
+.kiosklanding-callback-form-input
+  padding: 17px 16px
+  width: 100%
+  color: $text-color
+  border: 1px solid #f1f1ea
+  background-color: #fff
+  border-radius: $border-radius-base
+  outline: none !important
+
+.kiosklanding-callback-form-open-button
+  @include button-variant(#fff, #ff0036, rgba(255, 255, 255, 0))
+  padding: 17px 28px
+
+.kiosklanding-callback-form-submit-button
+  @include button-variant(#fff, #ff0036, rgba(255, 255, 255, 0))
+  margin:
+    top: 8px
+    right: 8px
+    left: -100%
+  padding: 8px 15px
+  position: relative
+  float: right
+
+.kiosklanding-callback-form-send
+  @extend %kiosklanding-callback-form-message
+
+.kiosklanding-callback-form-success
+  @extend %kiosklanding-callback-form-message
+  color: $brand-success
+
+.kiosklanding-callback-form-error
+  @extend %kiosklanding-callback-form-message
+  color: #ff0036

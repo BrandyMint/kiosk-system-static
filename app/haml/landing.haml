@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+%html
+  %head
+    +include 'app/haml/shared/_head.haml'
+
+  %body.kiosklanding-page
+    %header.navbar.kiosklanding-navbar
+      .container
+        %a.navbar-brand{href: '#'}
+          %span.kiosklanding-navbar-logo
+        %nav.pull-right
+          %p.navbar-text.hidden-xs != '<span class="text-muted">Звоните –</span> <a href="tel:+78007755661">8 (800) 77-55-661</a>, <span class="text-muted">пишите –</span> <a href="mailto: support@kiiiosk.ru" title="support@kiiiosk.ru">support@kiiiosk.ru</a>'
+          %a.btn.navbar-btn.kiosklanding-auth-button{href: '/login'} Вход
+        %p.navbar-text.text-right.hidden-sm.hidden-md.hidden-lg != '<a href="tel:+78007755661">8 (800) 77-55-661</a>'
+    %main.kiosklanding-main
+      .kiosklanding-hero
+        .container
+          .row
+            .col-md-6.col-lg-7.hidden-xs.hidden-sm
+              .browser
+                .browser-viewport
+                  %img{src: 'images/screenshots/kiosk-desktop.jpg', alt: ''}
+            .col-md-6.col-lg-5
+              .kiosklanding-hero-info
+                %h1.kiosklanding-hero-title != 'Мы создаем успешные <span class="text-nowrap">интернет-магазины</span>'
+                .kiosklanding-callback-form-container{data: {'react-class': 'CallbackForm', 'react-props': '{"postUrl": "/api/v1/user_requests/"}'}}
+          .iphone.visible-md.visible-lg
+            .iphone-screen
+              %img{src: 'images/screenshots/kiosk-mobile.jpg', alt: ''}
+      .kiosklanding-work-steps
+        .container
+          %h1.kiosklanding-section-title.text-center Как мы работаем?
+          .row.kiosklanding-work-steps-list
+            .col-md-8.col-md-offset-2
+              .row
+                .kiosklanding-work-steps-timeline
+                  .kiosklanding-work-steps-timeline-start Старт
+                .col-sm-6.kiosklanding-work-step.pull-left
+                  .kiosklanding-work-step-marker
+                    .kiosklanding-work-step-marker-text 1-ый день
+                  .row
+                    .col-sm-10
+                      %img{src: 'images/work-steps/work-step-1.jpg', alt: ''}
+                      %h3 Индивидуальный шаблон дизайна магазина
+                      %p Мы любим красоту, поэтому мы создали самые удобные и красивые шаблоны, которые мы готовы настроить специально под Вас.
+                .col-sm-6.kiosklanding-work-step.pull-right
+                  .kiosklanding-work-step-marker
+                    .kiosklanding-work-step-marker-text 2-ой день
+                  .row
+                    .col-sm-10.pull-right
+                      %img{src: 'images/work-steps/work-step-2.jpg', alt: ''}
+                      %h3 Помощь в быстром добавлении товаров
+                      %p Мой склад, google docs или добавление товаров вручную – мы помогаем добавить товары на сайт максимально быстрым и удобным для вас способом. Если у вас нет красивых фотографий или описаний – мы тоже можем помочь.
+                .col-sm-6.kiosklanding-work-step.pull-left
+                  .kiosklanding-work-step-marker
+                    .kiosklanding-work-step-marker-text 3-ий день
+                  .row
+                    .col-sm-10
+                      %img{src: 'images/work-steps/work-step-3.jpg', alt: ''}
+                      %h3 Простое подключение приема платежей
+                      %p В киоск уже встроена платежная система, вам ничего не надо делать дополнительно. Вы видите свой баланс и управляете деньгами прямо в кабинете Киоска
+                      %p Банковские карты, терминалы, салоны связи, наличные курьеру и еще более 100 способов приема платежей. Подходит как  для юридических так и для частных лиц. Единая ставка от 4% в месяц
+                .col-sm-6.kiosklanding-work-step.pull-right
+                  .kiosklanding-work-step-marker
+                    .kiosklanding-work-step-marker-text 4-ый день
+                  .row
+                    .col-sm-10.pull-right
+                      %img{src: 'images/work-steps/work-step-4.jpg', alt: ''}
+                      %h3 Полная интеграция с курьескими службами
+                      %p Автоматическая отправка заявок на доставку прямо в курьерскую службу. Прием наличных, статусы доставки прямо в личном кабинете киоска, расчет стоиомсти доставки для популярных служб: Boxberry, EMS, Red Express и тп
+                .col-sm-6.kiosklanding-work-step.pull-left
+                  .kiosklanding-work-step-marker
+                    .kiosklanding-work-step-marker-text 5-ый день
+                  .row
+                    .col-sm-10
+                      %img{src: 'images/work-steps/work-step-5.jpg', alt: ''}
+                      %h3 Запуск
+                      %p Вы получаете красивый работающий магазин, который готов к продаже товаров и получению первой прибыли.
+                .col-sm-6.kiosklanding-work-step.pull-right
+                  .row
+                    .col-sm-10.pull-right
+                      %img{src: 'images/work-steps/work-step-6.jpg', alt: ''}
+                      %h3 Выделенное время для решения ваших задач
+                      %p Если вы хотите, чтобы наши сотрудники работали с вами по индивидуальному плану, то мы выделяем персонального менеджера и программиста только под ваши задачи. стоимость услуги от 15 до 150 тысяч рублей в месяц
+      .kiosklanding-callback
+        .container.text-center
+          %h1.kiosklanding-section-title Подключение и все базовые функции бесплатны
+          .kiosklanding-callback-form-container{data: {'react-class': 'CallbackForm', 'react-props': '{"postUrl": "/api/v1/user_requests/"}'}}
+
+    / build:js
+    %script{src: 'scripts/vendor.js'}
+    %script{src: 'scripts/client.js'}
+    / endbuild
+    / build:counters
+    +include 'app/haml/shared/_google_analytics.html'
+    +include 'app/haml/shared/_yandex_metrica.html'
+    //+include 'app/haml/shared/_jivosite.html'
+    / endbuild
+    //+include 'app/haml/shared/_jivosite.html'

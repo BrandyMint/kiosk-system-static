@@ -1,0 +1,62 @@
+.kiosklanding-navbar
+  width: 100%
+  padding: $grid-gutter-width/2 0
+  position: absolute
+  top: 0
+  left: 0
+  z-index: $zindex-kiosklanding-navbar
+  a
+    color: inherit
+  .navbar-brand
+    margin-left: -$navbar-padding-horizontal
+    .kiosklanding-navbar-logo
+      position: relative
+      top: 2px
+      vertical-align: top
+  .navbar-text
+    font-size: 14px
+    color: $text-color
+    .text-muted
+      color: #a8a3a3
+  .kiosklanding-auth-button
+    margin: 6px 0 6px $navbar-padding-horizontal
+  .navbar-rightbox
+    margin-left: -100%
+    .navbar-btn
+      margin: 6px 0 6px $navbar-padding-horizontal
+      & + .navbar-btn
+        margin-left: 10px
+    @media (min-width: $screen-sm-min)
+      padding-right: 20px
+
+.kiosklanding-navbar-inverse
+  color: #fff
+  .kiosklanding-navbar-logo
+    @include img-retina("#{$images-path}/logo_white.png", "#{$images-path}/logo_white@2x.png", 73px, 15px)
+  .kiosklanding-auth-button
+    border-color: #73797d
+    color: #fff !important
+    &:hover
+      border-color: lighten(#73797d, 8%)
+      background: none
+
+.kiosklanding-navbar-logo
+  @include img-retina("#{$images-path}/logo.png", "#{$images-path}/logo@2x.png", 73px, 15px)
+  width: 73px
+  height: 15px
+  display: inline-block
+  vertical-align: middle
+
+@media (min-width: $screen-sm-min)
+  .kiosklanding-navbar
+    .kiosklanding-auth-button
+      margin-left: 0
+    .navbar-text
+      font-size: 16px
+
+  .kiosklanding-navbar-center
+    text-align: center
+    .navbar-brand
+      margin: 0 auto !important
+      display: inline-block
+      float: none

@@ -1,0 +1,105 @@
+.kiosklanding-promo
+  padding:
+    top: 100px
+    bottom: 30px
+  background-color: #313638
+  color: #fff
+  text-align: center
+  .kiosklanding-reg-button
+    margin-bottom: 10px
+  .kiosklanding-auth-form
+    margin:
+      top: 20px
+      bottom: 30px
+    .form-group
+      margin-bottom: 1px
+    .form-control
+      border-color: transparent
+      background-color: #4e5254
+      color: #fff
+      &:focus
+        background-color: #535759
+  .browser
+    background-color: #6d7373
+
+.kiosklanding-promo-title
+  @extend .kiosklanding-section-title
+
+.kiosklanding-promo-examples
+  padding:
+    top: 40px
+  position: relative
+  white-space: nowrap
+  overflow: hidden
+
+.kiosklanding-promo-examples-box
+  width: 1448px
+  display: inline-block
+  overflow: hidden
+  box-sizing: content-box
+
+.kiosklanding-promo-examples-list
+  transform: translate(0, 0);
+  animation: promo-examples-slide 80s 1s linear infinite;
+
+.kiosklanding-promo-example
+  margin: 0 10px
+  display: inline-block
+  .browser
+    width: 342px
+    height: 390px
+    box-shadow: none
+
+.kiosklanding-promo-example-link
+  color: #fff
+  &:hover,
+  &:active
+    color: #fff
+    text-decoration: none
+    .kiosklanding-promo-example-title
+      opacity: .8
+  &:link
+    color: inherit
+    text-decoration: none
+
+.kiosklanding-promo-example-title
+  margin-top: 20px
+  font-weight: 300
+  color: inherit
+  opacity: .5
+  transition: opacity .3s ease
+  backface-visibility: hidden
+
+@media (min-width: $screen-sm-min)
+  .kiosklanding-promo
+    .kiosklanding-reg-button
+      width: 100%
+      max-width: 260px
+      margin-bottom: 30px
+  .kiosklanding-promo-title
+    font-size: 60px
+  .kiosklanding-promo-examples
+    margin-bottom: 20px
+
+@media (max-width: $screen-md-max)
+  .kiosklanding-promo
+    .kiosklanding-callback-form-container
+      margin-bottom: 30px
+
+  .kiosklanding-promo-examples-box
+    width: 1280px
+    padding:
+      top: 10px
+      bottom: 10px
+
+  .kiosklanding-promo-example
+    .browser
+      width: 300px
+      height: 344px
+
+
+@keyframes promo-examples-slide
+  0%
+    transform: translate(0, 0);
+  100%
+    transform: translate(-225%, 0);

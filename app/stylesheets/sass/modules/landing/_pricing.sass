@@ -1,0 +1,68 @@
+.kiosklanding-pricing
+  background-color: #eee
+  & > .container
+    padding:
+      top: 60px
+      bottom: 60px
+  .kiosklanding-section-title
+    margin-bottom: 1em
+
+.kiosklanding-pricing-title
+  margin:
+    top: 0
+    bottom: 16px
+  font-weight: 300
+  font-size: 17px
+  line-height: 26px
+
+.kiosklanding-pricing-free
+  margin:
+    top: 0
+    bottom: 30px
+  font-weight: 100
+  font-size: 40px
+  line-height: 1
+  text-transform: uppercase
+
+.kiosklanding-pricing-commission
+  margin: 0 0 1.2em
+  padding-left: 26px
+  position: relative
+  font-size: 17px
+  line-height: 1.571em
+  @include img-retina("#{$images-path}/tariffs/card.png", "#{$images-path}/tariffs/card@2x.png", 17px, 11px)
+  background-position: 0 8px
+  background-repeat: no-repeat
+
+.kiosklanding-pricing-features
+  margin: 0 0 1.2em
+  padding: 0
+  font-size: 17px
+  line-height: 1.571em
+  list-style-type: none
+  li
+    padding: 0 0 4px 26px
+    position: relative
+    @include img-retina("#{$images-path}/tariffs/tick.png", "#{$images-path}/tariffs/tick@2x.png", 14px, 10px)
+    background-position: 2px 8px
+    background-repeat: no-repeat
+
+.kiosklanding-pricing-footnote
+  padding-left: 26px
+  .star
+    margin:
+      right: -100%
+      left: -1em
+    float: left
+
+@media (min-width: $screen-sm-min)
+  .kiosklanding-pricing-free
+    margin-bottom: 60px
+    font-size: 112px
+
+  .kiosklanding-pricing-commission,
+  .kiosklanding-pricing-features
+    margin-left: -26px
+
+  .kiosklanding-pricing-footnote
+    padding-left: 0

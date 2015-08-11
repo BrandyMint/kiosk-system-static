@@ -1,0 +1,57 @@
+.kiosklanding-socials
+  margin: 0
+  padding: 0
+  list-style-type: none
+  font-weight: 500
+  font-size: 16px
+
+.kiosklanding-social
+  padding: 10px
+  display: inline-block
+  vertical-align: middle
+  white-space: nowrap
+  color: #53575a
+  span
+    vertical-align: middle !important
+  .fb-like
+    margin-left: 10px
+
+.kiosklanding-social-link
+  display: inline-block
+  color: #53575a !important
+  &:hover,
+  &:active
+    color: #888b8d !important
+    text-decoration: none
+    .kiosklanding-social-icon
+      opacity: .6
+  &:link
+    color: #53575a
+    text-decoration: none
+
+.kiosklanding-social-icon
+  @include img-retina("#{$images-path}/socials/sprite.png", "#{$images-path}/socials/sprite@2x.png", 37px, 148px)
+  width: 32px
+  height: 32px
+  margin-right: 10px
+  display: inline-block
+  vertical-align: middle
+  opacity: .4
+
+.kiosklanding-social-icon-facebook
+  background-position: 0 0
+
+.kiosklanding-social-icon-instagram
+  background-position: 0 -37px
+
+.kiosklanding-social-icon-vkontakte
+  background-position: 0 -74px
+
+.kiosklanding-social-icon-twitter
+  background-position: 0 -111px
+
+@media (min-width: $screen-sm-min)
+  .kiosklanding-social
+    padding:
+      right: 24px
+      left: 24px

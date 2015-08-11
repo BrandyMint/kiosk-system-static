@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+%html
+  %head
+    +include './app/haml/shared/_head_v2.haml'
+
+  %body.kiosklanding-page
+    %header.navbar.kiosklanding-navbar.kiosklanding-navbar-inverse.kiosklanding-navbar-center
+      .container-fluid
+        %span.navbar-brand
+          %span.kiosklanding-navbar-logo
+        %div.navbar-rightbox.pull-right
+          %a.btn.navbar-btn.kiosklanding-auth-button{href: '/login'}
+            Вход для магазинов
+    %main.kiosklanding-main
+      .kiosklanding-promo
+        .container
+          .row
+            .col-md-8.col-md-offset-2
+              %h1.kiosklanding-promo-title != 'Создай собственный <span class="text-nowrap">интернет-магазин</span> бесплатно'
+          %a.btn.kiosklanding-reg-button{href: '#registration', title: 'Зарегистрироваться', ks-scrollto: true} Зарегистрироваться
+        .kiosklanding-promo-examples
+          %div{ks-owl-carousel2: true}
+            .kiosklanding-promo-example>
+              %a.kiosklanding-promo-example-link{href: 'http://www.wanna-be.ru', title: 'wanna-be.ru', target: '_blank'}
+                .browser
+                  .browser-viewport
+                    %img{src: 'images/promo-examples/wanna-be.jpg', alt: 'wanna-be.ru'}
+                %h6.kiosklanding-promo-example-title wanna-be.ru
+            .kiosklanding-promo-example>
+              %a.kiosklanding-promo-example-link{href: 'http://www.etc.kiiiosk.ru', title: 'etc.kiiiosk.ru', target: '_blank'}
+                .browser
+                  .browser-viewport
+                    %img{src: 'images/promo-examples/etc.jpg', alt: 'etc.kiiiosk.ru'}
+                %h6.kiosklanding-promo-example-title etc.kiiiosk.ru
+            .kiosklanding-promo-example>
+              %a.kiosklanding-promo-example-link{href: 'http://www.naturallab.ru', title: 'naturallab.ru', target: '_blank'}
+                .browser
+                  .browser-viewport
+                    %img{src: 'images/promo-examples/naturallab.jpg', alt: 'naturallab.ru'}
+                %h6.kiosklanding-promo-example-title naturallab.ru
+            .kiosklanding-promo-example>
+              %a.kiosklanding-promo-example-link{href: 'http://www.idealistbooks.ru', title: 'idealistbooks.ru', target: '_blank'}
+                .browser
+                  .browser-viewport
+                    %img{src: 'images/promo-examples/idealistbooks.jpg', alt: 'idealistbooks.ru'}
+                %h6.kiosklanding-promo-example-title idealistbooks.ru
+            .kiosklanding-promo-example>
+              %a.kiosklanding-promo-example-link{href: 'http://sputnik-bags.ru', title: 'sputnik-bags.ru', target: '_blank'}
+                .browser
+                  .browser-viewport
+                    %img{src: 'images/promo-examples/sputnik.jpg', alt: 'sputnik-bags.ru'}
+                %h6.kiosklanding-promo-example-title sputnik-bags.ru
+            .kiosklanding-promo-example>
+              %a.kiosklanding-promo-example-link{href: 'http://shop.mylkco.com', title: 'shop.mylkco.com', target: '_blank'}
+                .browser
+                  .browser-viewport
+                    %img{src: 'images/promo-examples/mylk.jpg', alt: 'shop.mylkco.com'}
+                %h6.kiosklanding-promo-example-title shop.mylkco.com
+            .kiosklanding-promo-example>
+              %a.kiosklanding-promo-example-link{href: 'http://saharokstore.ru', title: 'saharokstore.ru', target: '_blank'}
+                .browser
+                  .browser-viewport
+                    %img{src: 'images/promo-examples/saharok.jpg', alt: 'saharokstore.ru'}
+                %h6.kiosklanding-promo-example-title saharokstore.ru
+            .kiosklanding-promo-example>
+              %a.kiosklanding-promo-example-link{href: 'http://mastbrothers.ru', title: 'mastbrothers.ru', target: '_blank'}
+                .browser
+                  .browser-viewport
+                    %img{src: 'images/promo-examples/mastbrothers.jpg', alt: 'mastbrothers.ru'}
+                %h6.kiosklanding-promo-example-title mastbrothers.ru
+            .kiosklanding-promo-example>
+              %a.kiosklanding-promo-example-link{href: 'http://varvara-shop.com', title: 'varvara-shop.com', target: '_blank'}
+                .browser
+                  .browser-viewport
+                    %img{src: 'images/promo-examples/varvarashop.jpg', alt: 'varvara-shop.com'}
+                %h6.kiosklanding-promo-example-title varvara-shop.com
+      .kiosklanding-features
+        .container
+          .row.kiosklanding-features-list
+            .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-0.col-md-3.kiosklanding-feature
+              .kiosklanding-feature-figure
+                .kiosklanding-feature-icon-design
+              %h3
+                Простая настройка дизайна
+            .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-0.col-md-3.kiosklanding-feature
+              .kiosklanding-feature-figure
+                .kiosklanding-feature-icon-cards
+              %h3
+                Подключение приема платежей по паспорту
+            .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-0.col-md-3.kiosklanding-feature
+              .kiosklanding-feature-figure
+                .kiosklanding-feature-icon-mobile
+              %h3
+                Удобная покупка с мобильного
+            .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-0.col-md-3.kiosklanding-feature
+              .kiosklanding-feature-figure
+                .kiosklanding-feature-icon-orders
+              %h3 != 'Умная работа с<br /> заказами'
+          .row
+            %p.col-md-6.col-md-offset-3.text-center.kiosklanding-features-text != 'А так же: размещение на собственном домене, интеграция с сервисом <a href="http://www.moysklad.ru/" title="moysklad.ru" target="_blank">moysklad.ru</a>, выгрузка товаров в группу вконтакте, вывод потока фотографий из инстаграм и многое другое'
+      .kiosklanding-tariffs
+        .container
+          %h2.kiosklanding-section-title.text-center
+            Тарифы
+            %button.btn.kiosklanding-tariffs-button{data: {toggle: 'modal', target: '#modal-tarrifs'}} Посмотреть все
+          .row
+            .col-sm-6.col-lg-3
+              .kiosklanding-tariff.kiosklanding-tariff-1{href: '#', data: {toggle: 'modal', target: '#modal-tarrifs'}}
+                %h3.kiosklanding-tariff-title Тариф &laquo;Киоск&raquo;
+                .kiosklanding-tariff-price != '750 <sup class="after">руб/мес</sup>'
+                .kiosklanding-tariff-bonus
+                  .kiosklanding-tariff-bonus-label Бонус 500 руб
+                %ul.kiosklanding-tariff-features
+                  %li До 100 товаров
+                  %li
+                    5Mb данных
+                    %span.kiosklanding-info-trigger{data: {content: 'Объем дискового пространства под изображения и файлы'}, ks-popover-trigger: true}
+                      %i.icon-info-with-circle
+            .col-sm-6.col-lg-3
+              .kiosklanding-tariff.kiosklanding-tariff-2{href: '#', data: {toggle: 'modal', target: '#modal-tarrifs'}}
+                %h3.kiosklanding-tariff-title Тариф &laquo;Магазин&raquo;
+                .kiosklanding-tariff-price != '1 700 <sup class="after">руб/мес</sup>'
+                .kiosklanding-tariff-bonus
+                  .kiosklanding-tariff-bonus-label Бонус 1 000 руб
+                %ul.kiosklanding-tariff-features
+                  %li До 500 товаров
+                  %li
+                    30Mb данных
+                    %span.kiosklanding-info-trigger{data: {content: 'Объем дискового пространства под изображения и файлы'}, ks-popover-trigger: true}
+                      %i.icon-info-with-circle
+            .col-sm-6.col-lg-3
+              .kiosklanding-tariff.kiosklanding-tariff-3{href: '#', data: {toggle: 'modal', target: '#modal-tarrifs'}}
+                %h3.kiosklanding-tariff-title Тариф &laquo;Супермаркет&raquo;
+                .kiosklanding-tariff-price != '2 800 <sup class="after">руб/мес</sup>'
+                .kiosklanding-tariff-bonus
+                  .kiosklanding-tariff-bonus-label Бонус 2 000 руб
+                %ul.kiosklanding-tariff-features
+                  %li До 3000 товаров
+                  %li
+                    100Mb данных
+                    %span.kiosklanding-info-trigger{data: {content: 'Объем дискового пространства под изображения и файлы'}, ks-popover-trigger: true}
+                      %i.icon-info-with-circle
+            .col-sm-6.col-lg-3
+              .kiosklanding-tariff.kiosklanding-tariff-4{href: '#', data: {toggle: 'modal', target: '#modal-tarrifs'}}
+                %h3.kiosklanding-tariff-title Тариф &laquo;Гипермаркет&raquo;
+                .kiosklanding-tariff-price != '4 700 <sup class="after">руб/мес</sup>'
+                .kiosklanding-tariff-bonus
+                  .kiosklanding-tariff-bonus-label Бонус 6 000 руб
+                %ul.kiosklanding-tariff-features
+                  %li До 5000 товаров
+                  %li
+                    250Mb данных
+                    %span.kiosklanding-info-trigger{data: {content: 'Объем дискового пространства под изображения и файлы'}, ks-popover-trigger: true}
+                      %i.icon-info-with-circle
+          .row
+            %p.col-md-6.col-md-offset-3.text-center.kiosklanding-tariffs-text
+              != 'А также тарифный план &laquo;<b>Демо</b>&raquo; (бесплатный)<br /> и&nbsp;индивидуальный тарифный план &laquo;<b class="text-nowrap">Лакшери</b>&raquo;'
+      .kiosklanding-start
+        .container.text-center
+          .row
+            .col-sm-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+              %h2.kiosklanding-section-title != 'Мы знаем, как запускать успешные <span class="text-nowrap">интернет-магазины</span>'
+          #registration.kiosklanding-auth-form
+            .row
+              .col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3.col-lg-4.col-lg-offset-4
+                %form#new_vendor_registration_form{action: 'http://app.kiiiosk.ru/registration', method: 'post', accept-charset: 'UTF-8', novalidate: 'novalidate'}
+                  %h2 Регистрация
+                  .form-group
+                    %input.form-control{name: 'vendor_registration_form[vendor_name]', type: 'text', placeholder: 'Название магазина'}
+                  .form-group
+                    %input.form-control{name: 'vendor_registration_form[operator_name]', type: 'text', placeholder: 'Ваше Имя'}
+                  .form-group
+                    %input.form-control{name: 'vendor_registration_form[phone]', type: 'tel', placeholder: 'Номер телефона'}
+                  .form-group
+                    %input.form-control{name: 'vendor_registration_form[email]', type: 'email', placeholder: 'E-mail'}
+                  %input.btn{name: 'commit', type: 'submit', value: 'Продолжить'}
+          .row
+            .col-sm-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+              %p != '<span class="text-nowrap">пишите – <a href="mailto:support@kiiiosk.ru" title="support@kiiiosk.ru">support@kiiiosk.ru</a></span>'
+    %footer.kiosklanding-footer
+      .kiosklanding-footer-systems
+        .container
+          .kiosklanding-footer-payments
+            %span.kiosklanding-footer-payments-label Мы принимаем платежи
+            %span.kiosklanding-footer-payment.kiosklanding-footer-payment-cloudpayments
+            %span.kiosklanding-footer-payment.kiosklanding-footer-payment-mastercard
+            %span.kiosklanding-footer-payment.kiosklanding-footer-payment-visa
+            %span.kiosklanding-footer-payment.kiosklanding-footer-payment-walletone
+          .kiosklanding-footer-integrations
+            %span.kiosklanding-footer-integrations-label Мы интегрировали
+            %span.kiosklanding-footer-integration.kiosklanding-footer-integration-amocrm
+            %span.kiosklanding-footer-integration.kiosklanding-footer-integration-moysklad
+            %span.kiosklanding-footer-integration.kiosklanding-footer-integration-1c
+      .kiosklanding-footer-socials
+        .container
+          %ul.kiosklanding-socials
+            %li.kiosklanding-social
+              %a.kiosklanding-social-link{href: 'https://www.facebook.com/kiiiosk.ru', title: 'Facebook', target: '_blank'}
+                %i.kiosklanding-social-icon.kiosklanding-social-icon-facebook>
+                %span Facebook
+              .fb-like{data: {href: 'https://www.facebook.com/kiiiosk.ru', layout: 'button_count', action: 'like', 'show-faces': false, share: 'false'}
+            %li.kiosklanding-social
+              %a.kiosklanding-social-link{href: 'https://instagram.com/kiiiosk/', title: 'Instagram', target: '_blank'}
+                %i.kiosklanding-social-icon.kiosklanding-social-icon-instagram>
+                %span Instagram
+            %li.kiosklanding-social
+              %a.kiosklanding-social-link{href: 'https://vk.com/kiiiosk', title: 'Вконтакте', target: '_blank'}
+                %i.kiosklanding-social-icon.kiosklanding-social-icon-vkontakte>
+                %span Вконтакте
+            %li.kiosklanding-social
+              %a.kiosklanding-social-link{href: 'https://twitter.com/@kiiiosk_ru', title: 'Twitter', target: '_blank'}
+                %i.kiosklanding-social-icon.kiosklanding-social-icon-twitter>
+                %span Twitter
+      .kiosklanding-footer-links
+        .container
+          %a.kiosklanding-footer-link{href: '/prices', title: 'Тарифы'} Тарифы
+          %a.kiosklanding-footer-link{href: '/rules', title: 'Правила e-commerce'} Правила e-commerce
+          %a.kiosklanding-footer-link{href: '/offer', title: 'Оферта'} Оферта
+          %a.kiosklanding-footer-link{href: '/job', title: 'Вакансии'} Вакансии
+
+    #modal-tarrifs.modal.kiosklanding-modal-tarrifs.fade{tabindex: '-1', role: 'dialog'}
+      .modal-dialog{role: 'document'}
+        .modal-content
+          .modal-header
+            %button.close{data: {dismiss: 'modal', aria-label: 'Close'}}
+              %span{aria-hidden: 'true'}
+                %i.icon-circle-with-cross
+            %h2.kiosklanding-section-title.text-center Тарифы
+          .modal-body
+            .kiosklanding-tariffs-table-wrapper
+              %table.kiosklanding-tariffs-table
+                %thead
+                  %tr
+                    %th &nbsp;
+                    %th Демо
+                    %th Киоск
+                    %th Магазин
+                    %th Супермаркет
+                    %th Гипермаркет
+                    %th Лакшери
+                %tbody
+                  %tr.kiosklanding-tariffs-table-subtitle
+                    %th{colspan: 7} Основное
+                  %tr
+                    %td Абонплата
+                    %td
+                      .kiosklanding-tariff-price != '0 <sup class="after">руб/мес</sup>'
+                    %td
+                      .kiosklanding-tariff-price != '750 <sup class="after">руб/мес</sup>'
+                    %td
+                      .kiosklanding-tariff-price != '1 700 <sup class="after">руб/мес</sup>'
+                    %td
+                      .kiosklanding-tariff-price != '2 800 <sup class="after">руб/мес</sup>'
+                    %td
+                      .kiosklanding-tariff-price != '4 700 <sup class="after">руб/мес</sup>'
+                    %td
+                      .kiosklanding-tariff-price != '15 000 <sup class="after">руб/мес</sup>'
+                  %tr
+                    %td Подключение
+                    %td -
+                    %td -
+                    %td -
+                    %td -
+                    %td -
+                    %td 30 000 руб
+                  %tr
+                    %td Бонус при подключении
+                    %td -
+                    %td 500 руб
+                    %td 1 000 руб
+                    %td 2 000 руб
+                    %td 6 000 руб
+                    %td -
+                  %tr
+                    %td Максимальное количество товаров
+                    %td 30
+                    %td 100
+                    %td 500
+                    %td 3000
+                    %td 5000
+                    %td 10000
+                  %tr
+                    %td Объем дискового пространства под изображения и файлы
+                    %td 1Mb
+                    %td 5Mb
+                    %td 30Mb
+                    %td 100Mb
+                    %td 250Mb
+                    %td 512Mb
+                  %tr
+                    %td Индивидуальный домен
+                    %td -
+                    %td -
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                  %tr
+                    %td Реакция службы поддержки
+                    %td 48 часов
+                    %td 24 часа
+                    %td 24 часа
+                    %td 24 часа
+                    %td 12 часов
+                    %td 3 часа, скайп руководства
+                  %tr.kiosklanding-tariffs-table-subtitle
+                    %th{colspan: 7} Оплата
+                  %tr
+                    %td без интеграции (наложенный платеж и тп)
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                  %tr
+                    %td с интеграцией (Visa/MasterCard, терминалы и тп)
+                    %td -
+                    %td -
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                  %tr.kiosklanding-tariffs-table-subtitle
+                    %th{colspan: 7} Доставка
+                  %tr
+                    %td без интеграции (самовывоз, почта и тп)
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                  %tr
+                    %td с интеграцией (CSE, EMS, Redexpress)
+                    %td -
+                    %td -
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                      %br
+                      %br
+                      интеграция с любой службой доставки
+                  %tr.kiosklanding-tariffs-table-subtitle
+                    %th{colspan: 7} Уведомления клиенту и оператору (об оплате и статусах заказа) в месяц
+                  %tr
+                    %td email
+                    %td -
+                    %td не ограничено
+                    %td не ограничено
+                    %td не ограничено
+                    %td не ограничено
+                    %td не ограничено
+                  %tr
+                    %td SMS
+                    %td -
+                    %td -
+                    %td до 50
+                    %td до 150
+                    %td до 500
+                    %td до 1 тыс
+                  %tr.kiosklanding-tariffs-table-subtitle
+                    %th{colspan: 7} Интеграция с сервисами
+                  %tr
+                    %td Выгрузка в Yandex Market
+                    %td -
+                    %td -
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                  %tr
+                    %td Загрузка данных из Yandex Catalog
+                    %td -
+                    %td -
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                  %tr
+                    %td Загрузка данных из 1С CommerceML
+                    %td -
+                    %td -
+                    %td -
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                  %tr
+                    %td Загрузка данных по WebDAV
+                    %td -
+                    %td -
+                    %td -
+                    %td -
+                    %td -
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                  %tr
+                    %td Экспорт заказов и клиентов в AmoCRM
+                    %td -
+                    %td -
+                    %td -
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                  %tr.kiosklanding-tariffs-table-subtitle
+                    %th{colspan: 7} moysklad
+                  %tr
+                    %td резервирование товаров при заказе
+                    %td -
+                    %td -
+                    %td моментально
+                    %td моментально
+                    %td моментально
+                    %td моментально
+                  %tr
+                    %td синхронизация товаров и остатков не реже
+                    %td -
+                    %td 1 раз в 3 дня
+                    %td 1 раз в 3 дня
+                    %td 1 раз в сутки
+                    %td 1 раз в 3 часа
+                    %td каждый час
+                  %tr.kiosklanding-tariffs-table-subtitle
+                    %th{colspan: 7} Оформление
+                  %tr
+                    %tr
+                    %td Редактируемые шаблоны
+                    %td -
+                    %td -
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                  %tr
+                    %td Мобильная версия магазина
+                    %td -
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                  %tr
+                    %td кастомные стили и javascript
+                    %td -
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                  %tr.kiosklanding-tariffs-table-subtitle
+                    %th{colspan: 7} Менеджеры
+                  %tr
+                    %td Количество
+                    %td 1
+                    %td 1
+                    %td до 3
+                    %td до 5
+                    %td до 7
+                    %td не ограничено
+                  %tr
+                    %td Настраиваемые роли
+                    %td -
+                    %td -
+                    %td -
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                  %tr.kiosklanding-tariffs-table-subtitle
+                    %th{colspan: 7} Продвижение
+                  %tr
+                    %td Расширенные SEO-настройки (robots.txt, редиректы, ЧПУ, и тд)
+                    %td -
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                  %tr
+                    %td Система скидок
+                    %td -
+                    %td -
+                    %td -
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                    %td
+                      %i.kiosklanding-tariffs-icon-tick
+                  %tr.kiosklanding-tariffs-table-subtitle
+                    %th{colspan: 7} Дополнительно
+                  %tr
+                    %td Доработки и модификации по запросу
+                    %td -
+                    %td -
+                    %td -
+                    %td до 3-х часов
+                    %td до 5-и часов
+                    %td до 15-ти часов
+
+    / build:js
+    %script{src: 'scripts/vendor.js'}
+    %script{src: 'scripts/client.js'}
+    / endbuild
+    / build:counters
+    +include 'app/haml/shared/_google_analytics.html'
+    +include 'app/haml/shared/_yandex_metrica.html'
+    / endbuild
+    -# +include 'app/haml/shared/_jivosite.html'
+    +include 'app/haml/shared/_facebook_likes.html'

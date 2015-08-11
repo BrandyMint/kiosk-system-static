@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+%html
+  %head
+    +include './app/haml/shared/_head_v2.haml'
+  %body
+    .auth
+      .auth-header
+        .container
+          %a.auth-logo{href: 'landing2.html'} Киоск
+      .auth-content
+        .auth-grid-table
+          .auth-grid-table-cell
+            .container
+              .row
+                .col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3.col-lg-4.col-lg-offset-4
+                  .auth-form
+                    %form{action: '?', method: 'post', accept-charset: 'UTF-8', novalidate: 'novalidate'}
+                      %h1.form-title Создание магазина
+                      .form-group.form-group-first
+                        %input.form-control{type: 'text', placeholder: 'Название магазина'}
+                      .form-group
+                        %input.form-control{type: 'text', placeholder: 'Ваше Имя'}
+                      .form-group
+                        %input.form-control{type: 'tel', placeholder: 'Номер телефона'}
+                      .form-group
+                        %input.form-control{type: 'email', placeholder: 'E-mail'}
+                      .form-group.form-group-last
+                        %input.btn.btn-success.btn-block.btn-lg{value: 'Продолжить'}
+                    .row.auth-form-links
+                      .col-xs-6
+                        %p
+                          Уже есть магазин?
+                          %br
+                          %a{href: 'signup.html'}
+                            %strong Войти
+                      .col-xs-6
+                        %p
+                          По приглашению?
+                          %br
+                          %a{href: 'reset_password.html'}
+                            %strong Зарегистрироваться
