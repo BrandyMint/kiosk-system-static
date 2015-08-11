@@ -1,0 +1,23 @@
+.hero
+  padding:
+    top: 100px
+    bottom: 30px
+  background-color: #313638
+  color: #fff
+  text-align: center
+  .btn-reg
+    margin-bottom: 10px
+  .browser
+    background-color: #6d7373
+
+.hero-title
+  @extend .section-title
+
+@media (min-width: $screen-sm-min)
+  .hero
+    .btn-reg
+      width: 100%
+      max-width: 260px
+      margin-bottom: 30px
+  .hero-title
+    font-size: 60px

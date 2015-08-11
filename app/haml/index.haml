@@ -7,7 +7,7 @@
     .container
       %h1 КИОСК
       %hr
-      - pages = [{src: 'landing.html', title: 'Лэндинг (old версия)'}, {src: 'landing2.html', title: 'Лэндинг'}, {src: 'landing3.html', title: 'Лэндинг с тарифами'}, {src: 'system_login.html', title: 'Логин'}, {src: 'system_login_errors.html', title: 'Логин (ошибки)'}, {src: 'system_reset_password.html', title: 'Восстановление пароля'}, {src: 'system_signup.html', title: 'Регистрация'}, {src: 'system_signup_errors.html', title: 'Регистрация (ошибки)'}]
+      - pages = [{src: 'welcome.html', title: 'Главная страница'}, {src: 'system_login.html', title: 'Логин'}, {src: 'system_login_errors.html', title: 'Логин (ошибки)'}, {src: 'system_reset_password.html', title: 'Восстановление пароля'}, {src: 'system_signup.html', title: 'Регистрация'}, {src: 'system_signup_errors.html', title: 'Регистрация (ошибки)'}]
       %ol
         - for page of pages
           - page = pages[page]

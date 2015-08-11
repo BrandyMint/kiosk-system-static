@@ -102,30 +102,28 @@
 // Partials
 // =====================================================================
 
-// Landing
-@import "partials/landing/navbar";
-@import "partials/landing/buttons";
-@import "partials/landing/browser";
-@import "partials/landing/iphone";
-@import "partials/landing/hero";
-@import "partials/landing/sections";
-@import "partials/landing/work-steps";
-@import "partials/landing/callback";
-@import "partials/landing/callback-form";
-@import "partials/landing/auth-form";
-@import "partials/landing/promo";
-@import "partials/landing/features";
-@import "partials/landing/tariffs";
-@import "partials/landing/pricing";
-@import "partials/landing/start";
-@import "partials/landing/footer";
-@import "partials/landing/socials";
-@import "partials/landing/info-trigger";
-@import "partials/landing/modal-tariffs";
-
-// Common
+@import "partials/navbar";
 @import "partials/buttons";
-@import "partials/auth";
+@import "partials/browser";
+@import "partials/sections";
+@import "partials/hero";
+@import "partials/promo-examples";
+@import "partials/features";
+@import "partials/tariffs";
+@import "partials/start";
+@import "partials/footer";
+@import "partials/forms";
+@import "partials/auth-form";
+@import "partials/info-trigger";
+@import "partials/modal-tariffs";
+@import "partials/modal-tariffs";
+@import "partials/grid-full";
+
+
+// =====================================================================
+// Pages
+// =====================================================================
+@import "pages/simple";
 
 
 // =====================================================================
