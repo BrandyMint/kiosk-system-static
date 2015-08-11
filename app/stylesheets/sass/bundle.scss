@@ -1,26 +1,32 @@
 @charset "UTF-8";
 
-/*
- * Подключаем только те компоненты, миксины и утилиты,
- * которые используются на проекте, остальное - убираем
- */
 
-/* === Bootstrap === */
-// Core variables and mixins
+// =====================================================================
+// Bower Components: Variables/Mixins and etc.
+// =====================================================================
+
+// Bootstrap variables/mixins
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
 
-/* === Kiosk === */
-// Fonts
-@import "fonts/museosanscyrl";
 
-// Main Settings
-@import "settings/variables";
-@import "settings/typography";
-@import "settings/mixins";
-@import "settings/zindexes";
+// =====================================================================
+// Global: Variables/Mixins and etc.
+// =====================================================================
 
-/* === Bootstrap === */
+@import "global/variables";
+@import "global/mixins";
+@import "global/placeholders";
+@import "global/helpers";
+
+@import "global/typography";
+@import "global/zindexes";
+
+
+// =====================================================================
+// Bower Components: Other
+// =====================================================================
+
 // Reset and dependencies
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/normalize";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/print";
@@ -67,10 +73,10 @@
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/utilities";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/responsive-utilities";
 
-/* === Compass, FontAwesome === */
+// Compass
 @import "compass-mixins/lib/compass/typography/links/link-colors";
 
-/* === OwlCarousel2 === */
+// OwlCarousel2
 @import "owl.carousel/src/scss/owl.theme.default.scss";
 @import "owl.carousel/src/scss/_mixins.scss";
 @import "owl.carousel/src/scss/_theme.scss";
@@ -80,31 +86,50 @@
 @import "owl.carousel/src/scss/owl.lazyload.scss";
 @import "owl.carousel/src/scss/owl.video.scss";
 
-/* === Entypo Plus === */
+// Entypo Plus
 @import "entypo-plus/scss/entypo-plus";
 
-/* === Kiosk === */
+
+// =====================================================================
+// Fonts
+// =====================================================================
+
+// Static
+@import "fonts/museosanscyrl";
+
+
+// =====================================================================
+// Partials
+// =====================================================================
+
 // Landing
-@import "modules/landing/navbar";
-@import "modules/landing/buttons";
-@import "modules/landing/browser";
-@import "modules/landing/iphone";
-@import "modules/landing/hero";
-@import "modules/landing/sections";
-@import "modules/landing/work-steps";
-@import "modules/landing/callback";
-@import "modules/landing/callback-form";
-@import "modules/landing/auth-form";
-@import "modules/landing/promo";
-@import "modules/landing/features";
-@import "modules/landing/tariffs";
-@import "modules/landing/pricing";
-@import "modules/landing/start";
-@import "modules/landing/footer";
-@import "modules/landing/socials";
-@import "modules/landing/info-trigger";
-@import "modules/landing/modal-tariffs";
+@import "partials/landing/navbar";
+@import "partials/landing/buttons";
+@import "partials/landing/browser";
+@import "partials/landing/iphone";
+@import "partials/landing/hero";
+@import "partials/landing/sections";
+@import "partials/landing/work-steps";
+@import "partials/landing/callback";
+@import "partials/landing/callback-form";
+@import "partials/landing/auth-form";
+@import "partials/landing/promo";
+@import "partials/landing/features";
+@import "partials/landing/tariffs";
+@import "partials/landing/pricing";
+@import "partials/landing/start";
+@import "partials/landing/footer";
+@import "partials/landing/socials";
+@import "partials/landing/info-trigger";
+@import "partials/landing/modal-tariffs";
 
 // Common
-@import "modules/buttons";
-@import "modules/auth";
+@import "partials/buttons";
+@import "partials/auth";
+
+
+// =====================================================================
+// Global: States
+// =====================================================================
+
+@import "global/states";
