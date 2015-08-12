@@ -1,29 +1,36 @@
-// Navbar Index
+// Global
+.navbar-logo
+  @include img-retina("#{$images-path}/logo.png", "#{$images-path}/logo@2x.png", 73px, 15px)
+  width: 73px
+  height: 15px
+  display: inline-block
+  background-repeat: no-repeat
+  vertical-align: middle
+  text-indent: -9999px
+  .navbar-brand &
+    position: relative
+    top: 2px
+    vertical-align: top
+
+
+// Index
 .navbar-index
   width: 100%
   position: absolute
   top: 0
   left: 0
   z-index: $zindex-navbar-index
-  & > .container-fluid
-    padding:
-      top: $grid-gutter-width/2
-      bottom: $grid-gutter-width/2
   a
     color: inherit
   .navbar-brand
     margin-left: -$navbar-padding-horizontal
-    .navbar-index-brand-logo
-      position: relative
-      top: 2px
-      vertical-align: top
   .navbar-text
     font-size: 14px
     color: $text-color
     .text-muted
       color: #a8a3a3
   .navbar-btn
-    margin: 6px 0 6px $navbar-padding-horizontal
+    margin-left: $navbar-padding-horizontal
   .navbar-rightbox
     margin-left: -100%
     .navbar-btn
@@ -34,7 +41,7 @@
 
 .navbar-index-inverse
   color: #fff
-  .navbar-index-brand-logo
+  .navbar-logo
     @include img-retina("#{$images-path}/logo_white.png", "#{$images-path}/logo_white@2x.png", 73px, 15px)
   .btn-default
     color: initial !important
@@ -44,13 +51,6 @@
       &:hover
         border-color: lighten(#73797d, 8%)
         background: none
-
-.navbar-index-brand-logo
-  @include img-retina("#{$images-path}/logo.png", "#{$images-path}/logo@2x.png", 73px, 15px)
-  width: 73px
-  height: 15px
-  display: inline-block
-  vertical-align: middle
 
 @media (min-width: $screen-sm-min)
   .navbar-index
@@ -67,7 +67,7 @@
       font-size: 16px
 
 
-// Navbar Simple
+// Simple
 .navbar-simple
   position: absolute
   top: 0
@@ -76,24 +76,17 @@
   border-bottom: 1px solid #eee
   text-align: center
   z-index: $zindex-simple-header
-  & > .container
-    padding-top: 15px
-    padding-bottom: 15px
   .navbar-brand
-    height: 53px
     margin: 0 !important
     display: inline-block
     float: none
-
-.navbar-simple-logo
-  width: 120px
-  height: 23px
-  display: inline-block
-  background-image: url(#{$images-path}/logo.svg)
-  background-size: 120px auto
-  text-indent: -9999px
-  vertical-align: top
-  opacity: .6
-  transition: opacity .3s ease
-  &:hover
-    opacity: 1
+    opacity: .6
+    &:hover
+      opacity: 1
+    .navbar-logo
+      top: -1px
+  .navbar-logo
+    width: 120px
+    height: 23px
+    background-image: url(#{$images-path}/logo.svg)
+    background-size: 120px auto

@@ -85,17 +85,24 @@ $alert-danger-text:    $state-danger-text
 $alert-danger-border:  $state-danger-border
 
 //== Navbar
-$navbar-margin-bottom: 0
+$navbar-height:           80px
+$navbar-margin-bottom:    0
+
+$navbar-padding-vertical: (($navbar-height - $line-height-computed) / 2)
 
 //== Forms
 $input-border-radius: $border-radius-base
 
 $input-height-base:   ($line-height-computed + ($padding-base-vertical * 2) + 2)
+$input-height-small:  (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2)
 
 //== Browser
-$browser-bg: #a9a9a2
+$browser-bg:            #a9a9a2
 $browser-border-radius: 5px
 
 //== Info Trigger
-$info-trigger-color: #ccc
+$info-trigger-color:       #ccc
 $info-trigger-color-hover: #666
+
+//== Pages
+$simple-page-color: #777
