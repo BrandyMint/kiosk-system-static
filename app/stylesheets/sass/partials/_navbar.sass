@@ -1,4 +1,25 @@
+@mixin navbar-center()
+  text-align: center
+  .navbar-brand
+    margin: 0 !important
+    display: inline-block
+    float: none
+    vertical-align: middle
+  .navbar-nav
+    display: inline-block
+    float: none
+    vertical-align: middle
+
 // Global
+.navbar
+  border: none
+
+.navbar-center
+  @include navbar-center
+
+.navbar-bordered
+  border-bottom: 1px solid #eee
+
 .navbar-logo
   @include img-retina("#{$images-path}/logo.png", "#{$images-path}/logo@2x.png", 73px, 15px)
   width: 73px
@@ -12,6 +33,19 @@
     top: 2px
     vertical-align: top
 
+.navbar-toggle
+  opacity: .6
+  &:hover
+    opacity: 1
+  .icon-bar
+    background-color: #555
+
+@media (max-width: $screen-xs-max)
+  .navbar-collapse
+    border-top: 1px solid #eee
+    background-color: #fff
+    .navbar-rightbox
+      float: none !important
 
 // Index
 .navbar-index
@@ -54,13 +88,7 @@
 
 @media (min-width: $screen-sm-min)
   .navbar-index
-    text-align: center
-    border-radius: 0
-    .navbar-brand
-      margin: 0 auto !important
-      margin-left: -$navbar-padding-horizontal
-      display: inline-block
-      float: none
+    @include navbar-center
     .navbar-btn
       margin-left: 0
     .navbar-text
@@ -69,17 +97,14 @@
 
 // Simple
 .navbar-simple
+  @include navbar-center
+  @extend .navbar-bordered
   position: absolute
   top: 0
   right: 0
   left: 0
-  border-bottom: 1px solid #eee
-  text-align: center
   z-index: $zindex-simple-header
   .navbar-brand
-    margin: 0 !important
-    display: inline-block
-    float: none
     opacity: .6
     &:hover
       opacity: 1
