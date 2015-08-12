@@ -5742,7 +5742,7 @@ button.close {
     float: none;
     vertical-align: middle; }
 
-.navbar-bordered, .navbar-simple {
+.navbar-border-bottom, .navbar-simple {
   border-bottom: 1px solid #eee; }
 
 .navbar-logo {
