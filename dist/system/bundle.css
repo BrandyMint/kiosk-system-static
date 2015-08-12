@@ -6627,14 +6627,16 @@ button.close {
   .modal-tarrifs .modal-header .close {
     font-size: 48px; } }
 
-.grid-full {
-  width: 100%;
-  height: 100%;
+.grid-table {
   display: table; }
 
-.grid-full-middle {
+.grid-table-cell {
   display: table-cell;
   vertical-align: middle; }
+
+.grid-table-full {
+  width: 100%;
+  height: 100%; }
 
 .simple-page {
   position: fixed;
