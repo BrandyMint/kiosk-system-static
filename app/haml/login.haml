@@ -7,8 +7,8 @@
       %header.simple-header
         %nav.navbar.navbar-simple
           .container
-            %a.navbar-brand{href: 'landing2.html'}
-              %span.navbar-simple-logo Киоск
+            %a.navbar-brand{href: 'welcome.html'}
+              %span.navbar-logo Киоск
       .simple-body
         .grid-full
           .grid-full-middle
@@ -17,27 +17,23 @@
                 .col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3.col-lg-4.col-lg-offset-4
                   .form-flatbox
                     %form{action: '?', method: 'post', accept-charset: 'UTF-8', novalidate: 'novalidate'}
-                      %h1.form-title Создание магазина
+                      %h1.form-title Авторизация
                       .form-group.form-group-first
-                        %input.form-control{type: 'text', placeholder: 'Название магазина'}
+                        %input.form-control{type: 'text', placeholder: 'Номер телефона или email'}
                       .form-group
-                        %input.form-control{type: 'text', placeholder: 'Ваше Имя'}
-                      .form-group
-                        %input.form-control{type: 'tel', placeholder: 'Номер телефона'}
-                      .form-group
-                        %input.form-control{type: 'email', placeholder: 'E-mail'}
+                        %input.form-control{type: 'text', placeholder: 'Пин-код или пароль'}
                       .form-group.form-group-last
-                        %input.btn.btn-success.btn-block.btn-lg{value: 'Продолжить'}
+                        %input.btn.btn-success.btn-block{value: 'Продолжить'}
                     .row.form-flatbox-links
                       .col-xs-6
                         %p
-                          Уже есть магазин?
+                          Нет аккаунта?
                           %br
                           %a{href: 'signup.html'}
-                            %strong Войти
+                            %strong Создать магазин
                       .col-xs-6
                         %p
-                          По приглашению?
+                          Забыли пароль?
                           %br
                           %a{href: 'reset_password.html'}
-                            %strong Зарегистрироваться
+                            %strong Восстановить

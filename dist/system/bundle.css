@@ -1897,7 +1897,7 @@ input[type="date"], input[type="time"], input[type="datetime-local"], input[type
   line-height: 46px;
   line-height: 1.42857 \0; }
   input[type="date"].input-sm, .form-horizontal .form-group-sm input[type="date"].form-control, .input-group-sm > input[type="date"].form-control, .input-group-sm > input[type="date"].input-group-addon, .input-group-sm > .input-group-btn > input[type="date"].btn, input[type="time"].input-sm, .form-horizontal .form-group-sm input[type="time"].form-control, .input-group-sm > input[type="time"].form-control, .input-group-sm > input[type="time"].input-group-addon, .input-group-sm > .input-group-btn > input[type="time"].btn, input[type="datetime-local"].input-sm, .form-horizontal .form-group-sm input[type="datetime-local"].form-control, .input-group-sm > input[type="datetime-local"].form-control, .input-group-sm > input[type="datetime-local"].input-group-addon, .input-group-sm > .input-group-btn > input[type="datetime-local"].btn, input[type="month"].input-sm, .form-horizontal .form-group-sm input[type="month"].form-control, .input-group-sm > input[type="month"].form-control, .input-group-sm > input[type="month"].input-group-addon, .input-group-sm > .input-group-btn > input[type="month"].btn {
-    line-height: 30px; }
+    line-height: 41px; }
   input[type="date"].input-lg, .form-horizontal .form-group-lg input[type="date"].form-control, .input-group-lg > input[type="date"].form-control, .input-group-lg > input[type="date"].input-group-addon, .input-group-lg > .input-group-btn > input[type="date"].btn, input[type="time"].input-lg, .form-horizontal .form-group-lg input[type="time"].form-control, .input-group-lg > input[type="time"].form-control, .input-group-lg > input[type="time"].input-group-addon, .input-group-lg > .input-group-btn > input[type="time"].btn, input[type="datetime-local"].input-lg, .form-horizontal .form-group-lg input[type="datetime-local"].form-control, .input-group-lg > input[type="datetime-local"].form-control, .input-group-lg > input[type="datetime-local"].input-group-addon, .input-group-lg > .input-group-btn > input[type="datetime-local"].btn, input[type="month"].input-lg, .form-horizontal .form-group-lg input[type="month"].form-control, .input-group-lg > input[type="month"].form-control, .input-group-lg > input[type="month"].input-group-addon, .input-group-lg > .input-group-btn > input[type="month"].btn {
     line-height: 46px; }
 
@@ -1954,15 +1954,15 @@ input[type="radio"][disabled], input[type="radio"].disabled, fieldset[disabled] 
     padding-right: 0; }
 
 .input-sm, .form-horizontal .form-group-sm .form-control, .input-group-sm > .form-control, .input-group-sm > .input-group-addon, .input-group-sm > .input-group-btn > .btn {
-  height: 30px;
+  height: 41px;
   padding: 10px 14px;
   font-size: 13px;
   line-height: 1.5;
   border-radius: 2px; }
 
 select.input-sm, .form-horizontal .form-group-sm select.form-control, .input-group-sm > select.form-control, .input-group-sm > select.input-group-addon, .input-group-sm > .input-group-btn > select.btn {
-  height: 30px;
-  line-height: 30px; }
+  height: 41px;
+  line-height: 41px; }
 
 textarea.input-sm, .form-horizontal .form-group-sm textarea.form-control, .input-group-sm > textarea.form-control, .input-group-sm > textarea.input-group-addon, .input-group-sm > .input-group-btn > textarea.btn, select[multiple].input-sm, .form-horizontal .form-group-sm select[multiple].form-control, .input-group-sm > select[multiple].form-control, .input-group-sm > select[multiple].input-group-addon, .input-group-sm > .input-group-btn > select[multiple].btn {
   height: auto; }
@@ -2003,9 +2003,9 @@ textarea.input-lg, .form-horizontal .form-group-lg textarea.form-control, .input
   line-height: 46px; }
 
 .input-sm + .form-control-feedback, .input-sm + .form-horizontal .form-group-sm .form-control, .form-horizontal .form-group-sm .input-sm + .form-control, .input-sm + .input-group-sm > .form-control, .input-group-sm > .input-sm + .form-control, .input-sm + .input-group-sm > .input-group-addon, .input-group-sm > .input-sm + .input-group-addon, .input-sm + .input-group-sm > .input-group-btn > .btn, .input-group-sm > .input-group-btn > .input-sm + .btn {
-  width: 30px;
-  height: 30px;
-  line-height: 30px; }
+  width: 41px;
+  height: 41px;
+  line-height: 41px; }
 
 .has-success .help-block, .has-success .control-label, .has-success .radio, .has-success .checkbox, .has-success .radio-inline, .has-success .checkbox-inline {
   color: #fff; }
@@ -2780,7 +2780,7 @@ tbody.collapse.in {
 
 .navbar {
   position: relative;
-  min-height: 50px;
+  min-height: 80px;
   margin-bottom: 0;
   border: 1px solid transparent; }
   .navbar:before, .navbar:after {
@@ -2874,10 +2874,10 @@ tbody.collapse.in {
 
 .navbar-brand {
   float: left;
-  padding: 15px 15px;
+  padding: 30px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 50px; }
+  height: 80px; }
   .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none; }
   @media (min-width: 768px) {
@@ -2889,8 +2889,8 @@ tbody.collapse.in {
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 23px;
+  margin-bottom: 23px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -2909,7 +2909,7 @@ tbody.collapse.in {
       display: none; } }
 
 .navbar-nav {
-  margin: 7.5px -15px; }
+  margin: 15px -15px; }
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -2936,8 +2936,8 @@ tbody.collapse.in {
       .navbar-nav > li {
         float: left; }
         .navbar-nav > li > a {
-          padding-top: 15px;
-          padding-bottom: 15px; }
+          padding-top: 30px;
+          padding-bottom: 30px; }
       .navbar-nav.navbar-right:last-child {
         margin-right: -15px; } }
 
@@ -2954,8 +2954,8 @@ tbody.collapse.in {
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 2px;
-  margin-bottom: 2px; }
+  margin-top: 17px;
+  margin-bottom: 17px; }
   @media (max-width: 767px) {
     .navbar-form .form-group {
       margin-bottom: 5px; } }
@@ -2981,18 +2981,18 @@ tbody.collapse.in {
   border-bottom-left-radius: 0; }
 
 .navbar-btn {
-  margin-top: 2px;
-  margin-bottom: 2px; }
+  margin-top: 17px;
+  margin-bottom: 17px; }
   .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
-    margin-top: 10px;
-    margin-bottom: 10px; }
+    margin-top: 19.5px;
+    margin-bottom: 19.5px; }
   .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
-    margin-top: 14px;
-    margin-bottom: 14px; }
+    margin-top: 29px;
+    margin-bottom: 29px; }
 
 .navbar-text {
-  margin-top: 15px;
-  margin-bottom: 15px; }
+  margin-top: 30px;
+  margin-bottom: 30px; }
   @media (min-width: 768px) {
     .navbar-text {
       float: left;
@@ -5727,30 +5727,40 @@ button.close {
   font-weight: bold;
   font-style: normal; }
 
+.navbar-logo {
+  background-image: url("system/images/logo.png");
+  width: 73px;
+  height: 15px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  text-indent: -9999px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .navbar-logo {
+      background-image: url("system/images/logo@2x.png");
+      background-size: 73px 15px; } }
+  .navbar-brand .navbar-logo {
+    position: relative;
+    top: 2px;
+    vertical-align: top; }
+
 .navbar-index {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 10; }
-  .navbar-index > .container-fluid {
-    padding-top: 15px;
-    padding-bottom: 15px; }
   .navbar-index a {
     color: inherit; }
   .navbar-index .navbar-brand {
     margin-left: -15px; }
-    .navbar-index .navbar-brand .navbar-index-brand-logo {
-      position: relative;
-      top: 2px;
-      vertical-align: top; }
   .navbar-index .navbar-text {
     font-size: 14px;
     color: #333333; }
     .navbar-index .navbar-text .text-muted {
       color: #a8a3a3; }
   .navbar-index .navbar-btn {
-    margin: 6px 0 6px 15px; }
+    margin-left: 15px; }
   .navbar-index .navbar-rightbox {
     margin-left: -100%; }
     .navbar-index .navbar-rightbox .navbar-btn + .navbar-btn {
@@ -5761,10 +5771,10 @@ button.close {
 
 .navbar-index-inverse {
   color: #fff; }
-  .navbar-index-inverse .navbar-index-brand-logo {
+  .navbar-index-inverse .navbar-logo {
     background-image: url("system/images/logo_white.png"); }
     @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-      .navbar-index-inverse .navbar-index-brand-logo {
+      .navbar-index-inverse .navbar-logo {
         background-image: url("system/images/logo_white@2x.png");
         background-size: 73px 15px; } }
   .navbar-index-inverse .btn-default {
@@ -5775,17 +5785,6 @@ button.close {
       .navbar-index-inverse .btn-default.btn-outline:hover {
         border-color: #888d91;
         background: none; }
-
-.navbar-index-brand-logo {
-  background-image: url("system/images/logo.png");
-  width: 73px;
-  height: 15px;
-  display: inline-block;
-  vertical-align: middle; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    .navbar-index-brand-logo {
-      background-image: url("system/images/logo@2x.png");
-      background-size: 73px 15px; } }
 
 @media (min-width: 768px) {
   .navbar-index {
@@ -5809,27 +5808,20 @@ button.close {
   border-bottom: 1px solid #eee;
   text-align: center;
   z-index: 10; }
-  .navbar-simple > .container {
-    padding-top: 15px;
-    padding-bottom: 15px; }
   .navbar-simple .navbar-brand {
-    height: 53px;
     margin: 0 !important;
     display: inline-block;
-    float: none; }
-
-.navbar-simple-logo {
-  width: 120px;
-  height: 23px;
-  display: inline-block;
-  background-image: url(system/images/logo.svg);
-  background-size: 120px auto;
-  text-indent: -9999px;
-  vertical-align: top;
-  opacity: 0.6;
-  transition: opacity 0.3s ease; }
-  .navbar-simple-logo:hover {
-    opacity: 1; }
+    float: none;
+    opacity: 0.6; }
+    .navbar-simple .navbar-brand:hover {
+      opacity: 1; }
+    .navbar-simple .navbar-brand .navbar-logo {
+      top: -1px; }
+  .navbar-simple .navbar-logo {
+    width: 120px;
+    height: 23px;
+    background-image: url(system/images/logo.svg);
+    background-size: 120px auto; }
 
 .btn {
   padding: 12px 14px;
@@ -6661,4 +6653,4 @@ button.close {
 .simple-body {
   min-height: 100%;
   height: 100%;
-  padding-top: 84px; }
+  padding-top: 80px; }

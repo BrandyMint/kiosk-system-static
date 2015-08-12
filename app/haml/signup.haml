@@ -7,8 +7,8 @@
       %header.simple-header
         %nav.navbar.navbar-simple
           .container
-            %a.navbar-brand{href: 'landing2.html'}
-              %span.navbar-simple-logo Киоск
+            %a.navbar-brand{href: 'welcome.html'}
+              %span.navbar-logo Киоск
       .simple-body
         .grid-full
           .grid-full-middle
@@ -17,30 +17,27 @@
                 .col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3.col-lg-4.col-lg-offset-4
                   .form-flatbox
                     %form{action: '?', method: 'post', accept-charset: 'UTF-8', novalidate: 'novalidate'}
-                      .alert.alert-danger != 'Обнаружены ошибки,<br /> пожалуйста, взгляните на&nbsp;них'
                       %h1.form-title Создание магазина
-                      .form-group.form-group-first.has-error
+                      .form-group.form-group-first
                         %input.form-control{type: 'text', placeholder: 'Название магазина'}
-                        %p.help-block не может быть пустым
                       .form-group
                         %input.form-control{type: 'text', placeholder: 'Ваше Имя'}
-                      .form-group.has-error
+                      .form-group
                         %input.form-control{type: 'tel', placeholder: 'Номер телефона'}
-                        %p.help-block != 'Неверный формат телефона. Прим.: <span class="text-nowrap">+7 913 123 32 10</span>'
                       .form-group
                         %input.form-control{type: 'email', placeholder: 'E-mail'}
                       .form-group.form-group-last
-                        %input.btn.btn-success.btn-block{value: 'Продолжить'}
+                        %input.btn.btn-success.btn-block.btn-lg{value: 'Продолжить'}
                     .row.form-flatbox-links
                       .col-xs-6
                         %p
                           Уже есть магазин?
                           %br
-                          %a{href: 'signup.html'}
+                          %a{href: 'login.html'}
                             %strong Войти
                       .col-xs-6
                         %p
                           По приглашению?
                           %br
-                          %a{href: 'reset_password.html'}
+                          %a{href: 'signup.html'}
                             %strong Зарегистрироваться
