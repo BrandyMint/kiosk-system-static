@@ -1,0 +1,43 @@
+.owl-nav-arrow
+  .owl-controls
+    margin-top: 0
+    .owl-nav
+      .owl-prev,
+      .owl-next
+        margin: -22px 0 0
+        position: absolute
+        top: 50%
+        background-color: transparent
+        font-size: 36px
+        color: inherit
+        &:hover
+          background-color: transparent
+          color: inherit
+
+      .owl-prev
+        @extend [class^="icon-"]
+        @extend .icon-chevron-thin-left
+        left: 20px
+
+      .owl-next
+        @extend [class^="icon-"]
+        @extend .icon-chevron-thin-right
+        right: 20px
+
+      @media (max-width: $screen-xs-max)
+        .owl-prev,
+        .owl-next
+          margin-top: -18px
+          font-size: 28px
+        .owl-prev
+          left: 0
+        .owl-next
+          right: 0
+
+.owl-testimonials
+  .owl-controls
+    .owl-nav
+      .owl-prev,
+      .owl-next
+        top: auto
+        bottom: 72%

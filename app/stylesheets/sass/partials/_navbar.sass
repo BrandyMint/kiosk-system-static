@@ -12,7 +12,7 @@
 
 // Global
 .navbar
-  border: none
+  border: 0
 
 .navbar-center
   @include navbar-center
@@ -39,6 +39,12 @@
     opacity: 1
   .icon-bar
     background-color: #555
+
+.navbar-btn
+  &.pull-right
+    margin-left: $navbar-padding-horizontal
+  & + &
+    margin-left: $navbar-padding-horizontal
 
 @media (max-width: $screen-xs-max)
   .navbar-collapse
