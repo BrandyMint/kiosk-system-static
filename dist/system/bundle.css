@@ -5786,11 +5786,8 @@ button.close {
     color: inherit; }
   .navbar-index .navbar-brand {
     margin-left: -15px; }
-  .navbar-index .navbar-text {
-    font-size: 14px;
-    color: #333333; }
-    .navbar-index .navbar-text .text-muted {
-      color: #a8a3a3; }
+  .navbar-index .navbar-text .text-muted {
+    color: #a8a3a3; }
   .navbar-index .navbar-btn {
     margin-left: 15px; }
   .navbar-index .navbar-rightbox {
@@ -5831,9 +5828,7 @@ button.close {
       float: none;
       vertical-align: middle; }
     .navbar-index .navbar-btn {
-      margin-left: 0; }
-    .navbar-index .navbar-text {
-      font-size: 16px; } }
+      margin-left: 0; } }
 
 .navbar-simple {
   text-align: center;

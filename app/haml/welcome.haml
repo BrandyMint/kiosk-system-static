@@ -10,8 +10,9 @@
           %span.navbar-brand
             %span.navbar-logo Киоск
           %div.navbar-rightbox.pull-right
+            %p.navbar-text.pull-left != '<span class="text-nowrap"><span class="hidden-xs hidden-sm text-muted">звоните – </span><a href="tel:88007755661">8 (800) 77-55-661</a></span>'
             %a.btn.btn-sm.btn-default.btn-outline.navbar-btn{href: '/login'}
-              Вход для магазинов
+              != 'Вход<span class="hidden-xs hidden-sm"> для магазинов</span>'
       .hero
         .container
           .row
@@ -178,7 +179,7 @@
                     %input.btn.btn-success.btn-block{name: 'commit', type: 'submit', value: 'Продолжить'}
           .row
             .col-sm-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
-              %p != '<span class="text-nowrap">пишите – <a href="mailto:support@kiiiosk.ru" title="support@kiiiosk.ru">support@kiiiosk.ru</a></span>'
+              %p != '<span class="text-nowrap">звоните  – <a href="tel:88007755661">8 (800) 77-55-661</a></span>,</span> <span class="text-nowrap">или пишите – <a href="mailto:support@kiiiosk.ru" title="support@kiiiosk.ru">support@kiiiosk.ru</a></span>'
     %footer.footer
       .footer-systems
         .container
