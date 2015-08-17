@@ -1,3 +1,11 @@
+/* line 1, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/global/helpers */
+.margin-bottom-md {
+  margin-bottom: 30px; }
+
+/* line 4, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/global/helpers */
+.margin-bottom-lg {
+  margin-bottom: 50px; }
+
 /* line 1, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/global/typography */
 body {
   font-weight: 300; }
