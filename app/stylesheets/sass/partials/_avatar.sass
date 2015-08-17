@@ -1,0 +1,15 @@
+@mixin avatar-size($size)
+  width: $avatar-base-size
+  height: $avatar-base-size
+
+.avatar
+  @include avatar-size($avatar-base-size)
+  position: relative
+  display: inline-block
+  background-position: 50% 50%
+  background-repeat: no-repeat
+  background-size: cover
+  vertical-align: middle
+
+.avatar-circle
+  border-radius: 50%

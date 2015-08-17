@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+%html
+  %head
+    +include './app/haml/shared/_head_v2.haml'
+
+  %body
+    -# %header.header
+    -#   %nav.navbar
+    -#     .container
+    -#       %span.navbar-brand
+    -#         %span.navbar-logo Киоск
+    -#       %a.btn.btn-sm.btn-default.btn-outline.navbar-btn.pull-right{href: '/login'}
+    -#         != 'Вход<span class="hidden-xs hidden-sm"> для магазинов</span>'
+    -#       %p.navbar-text.navbar-right.text-right.text-nowrap
+    -#         != '<span class="hidden-xs hidden-sm text-muted">звоните – </span><a href="tel:88007755661">8 (800) 77-55-661</a>'
+    .jumbotron.jumbotron-cover.bg-primary.text-center{style: 'background-image: url(images/covers/saharok-1.jpg);'}
+      .container
+        %h1.section-title != '<span class="text-nowrap">Интернет-магазин</span> за&nbsp;3&nbsp;минуты'
+        %p Удивительно быстрое создание интернет витрины
+        %p &nbsp;
+        %p
+          %a.btn.btn-success.btn-lg{href: ''} Узнать подробности
+    .section.bg-warning.text-center
+      .container
+        .row
+          .col-md-6.col-md-offset-3
+            .lead-icon.h3
+              %i.icon-video
+            %h2.section-title Как это работает?
+            %p Все очень просто. Вам не нужно обладать знаниями в программировании, дизайне и т.д. Все что вам нужно - это посмотреть видео
+            %p &nbsp;
+            .embed-responsive.embed-responsive-16by9
+              %iframe.embed-responsive-item{src: '//www.youtube.com/embed/zpOULjyy-n8?rel=0', allowfullscreen: true}
+    .section.text-center
+      .container
+        .row
+          .col-md-8.col-md-offset-2
+            .lead-icon.h3
+              %i.icon-sound
+            %h2.section-title Отзывы
+        .row
+          .col-sm-10.col-sm-offset-1.col-md-4.col-md-offset-0
+            %h4.margin-bottom-sm != '&laquo;До Kiosk\'а какие платформы только мы не пробовали. Только перешли и продажи пошли в горы! Спасибо вам огромное)&raquo;'
+            %p
+              %span.avatar.avatar-circle{style: 'background-image: url(http://st.kp.yandex.net/images/actor_iphone/iphone360_3903.jpg);'}
+            %p != 'Скарлетт<br /> <a href="http://rings.kiiiosk.ru">rings.kiiiosk.ru</a>'
+            .margin-bottom-lg.hidden-md.hidden-lg
+          .col-sm-10.col-sm-offset-1.col-md-4.col-md-offset-0
+            %h4.margin-bottom-sm != '&laquo;Пробовали множество конструкторов, но именно Kiosk дал нам возможность сделать качественный интернет-магазин с нуля, не имея никаких знаний о программировании. Спасибо вам огромное!&raquo;'
+            %p
+              %span.avatar.avatar-circle{style: 'background-image: url(http://st.kp.yandex.net/images/actor_iphone/iphone360_6264.jpg);'}
+            %p != 'Алексей<br /> <a href="http://supermag.kiiiosk.ru">supermag.kiiiosk.ru</a>'
+            .margin-bottom-lg.hidden-md.hidden-lg
+          .col-sm-10.col-sm-offset-1.col-md-4.col-md-offset-0
+            %h4.margin-bottom-sm != '&laquo;Супер! Ребята, вы огромные молодцы!&raquo;'
+            %p
+              %span.avatar.avatar-circle{style: 'background-image: url(http://st.kp.yandex.net/images/actor_iphone/iphone360_24302.jpg);'}
+            %p != 'Кира<br /> <a href="http://butterfly.kiiiosk.ru">butterfly.kiiiosk.ru</a>'
+      -# %div(ks-testimonials-slider)
+      -#   .container
+      -#     .row
+      -#       .col-xs-10.col-xs-offset-1.col-md-8.col-md-offset-2
+      -#         %h3.lead != '&laquo;Пробовали множество конструкторов, но именно Kiosk дал нам возможность сделать качественный интернет-магазин с нуля, не имея никаких знаний о программировании. Спасибо вам огромное!&raquo;'
+      -#         %p
+      -#           %span.avatar.avatar-circle{style: 'background-image: url(http://st.kp.yandex.net/images/actor_iphone/iphone360_6264.jpg);'}
+      -#         %p != 'Алексей<br /> <a href="http://supermag.kiiiosk.ru">supermag.kiiiosk.ru</a>'
+      -#   .container
+      -#     .row
+      -#       .col-xs-10.col-xs-offset-1.col-md-8.col-md-offset-2
+      -#         %h3.lead != '&laquo;Супер! Ребята, вы огромные молодцы!&raquo;'
+      -#         %p
+      -#           %span.avatar.avatar-circle{style: 'background-image: url(http://st.kp.yandex.net/images/actor_iphone/iphone360_24302.jpg);'}
+      -#         %p != 'Кира<br /> <a href="http://butterfly.kiiiosk.ru">butterfly.kiiiosk.ru</a>'
+      -#   .container
+      -#     .row
+      -#       .col-xs-10.col-xs-offset-1.col-md-8.col-md-offset-2
+      -#         %h3.lead != '&laquo;До Kiosk\'а какие платформы только мы не пробовали. Только перешли и продажи пошли в горы! Спасибо вам огромное)&raquo;'
+      -#         %p
+      -#           %span.avatar.avatar-circle{style: 'background-image: url(http://st.kp.yandex.net/images/actor_iphone/iphone360_3903.jpg);'}
+      -#         %p != 'Скарлетт<br /> <a href="http://rings.kiiiosk.ru">rings.kiiiosk.ru</a>'
+      -#   .container
+      -#     .row
+      -#       .col-xs-10.col-xs-offset-1.col-md-8.col-md-offset-2
+      -#         %h3.lead != '&laquo;Простота - вот, что мне нравится в киоске&raquo;'
+      -#         %p
+      -#           %span.avatar.avatar-circle{style: 'background-image: url(http://st.kp.yandex.net/images/actor_iphone/iphone360_6226.jpg);'}
+      -#         %p != 'Кэрри-Энн Мосс<br /> <a href="http://matrix.kiiiosk.ru">matrix.kiiiosk.ru</a>'
+    .section.bg-info.text-center
+      .container.margin-bottom-md
+        .lead-icon.h3
+          %i.icon-briefcase
+        %h2.section-title Примеры
+        %p Взгляните на эту красоту и Вы захотите такой же интернет-магазин
+      -# .promo-examples
+      -#   %div(ks-owl-carousel2)
+      -#     .promo-example>
+      -#       .browser
+      -#         .browser-viewport
+      -#           %img{src: 'images/promo-examples/wanna-be.jpg', alt: 'wanna-be.ru'}
+      -#       %h6.promo-example-title wanna-be.ru
+      -#     .promo-example>
+      -#       .browser
+      -#         .browser-viewport
+      -#           %img{src: 'images/promo-examples/etc.jpg', alt: 'etc.kiiiosk.ru'}
+      -#       %h6.promo-example-title etc.kiiiosk.ru
+      -#     .promo-example>
+      -#       .browser
+      -#         .browser-viewport
+      -#           %img{src: 'images/promo-examples/naturallab.jpg', alt: 'naturallab.ru'}
+      -#       %h6.promo-example-title naturallab.ru
+      -#     .promo-example>
+      -#       .browser
+      -#         .browser-viewport
+      -#           %img{src: 'images/promo-examples/idealistbooks.jpg', alt: 'idealistbooks.ru'}
+      -#       %h6.promo-example-title idealistbooks.ru
+      -#     .promo-example>
+      -#       .browser
+      -#         .browser-viewport
+      -#           %img{src: 'images/promo-examples/sputnik.jpg', alt: 'sputnik-bags.ru'}
+      -#       %h6.promo-example-title sputnik-bags.ru
+      -#     .promo-example>
+      -#       .browser
+      -#         .browser-viewport
+      -#           %img{src: 'images/promo-examples/mylk.jpg', alt: 'shop.mylkco.com'}
+      -#       %h6.promo-example-title shop.mylkco.com
+      -#     .promo-example>
+      -#       .browser
+      -#         .browser-viewport
+      -#           %img{src: 'images/promo-examples/saharok.jpg', alt: 'saharokstore.ru'}
+      -#       %h6.promo-example-title saharokstore.ru
+      -#     .promo-example>
+      -#       .browser
+      -#         .browser-viewport
+      -#           %img{src: 'images/promo-examples/mastbrothers.jpg', alt: 'mastbrothers.ru'}
+      -#       %h6.promo-example-title mastbrothers.ru
+      -#     .promo-example>
+      -#       .browser
+      -#         .browser-viewport
+      -#           %img{src: 'images/promo-examples/varvarashop.jpg', alt: 'varvara-shop.com'}
+      -#       %h6.promo-example-title varvara-shop.com
+      .container
+        .row
+          .col-lg-3.margin-bottom-md>
+            .browser
+              .browser-viewport
+                %img{src: 'images/promo-examples/wanna-be.jpg', alt: 'wanna-be.ru'}
+            %h6 wanna-be.ru
+          .col-lg-3.margin-bottom-md>
+            .browser
+              .browser-viewport
+                %img{src: 'images/promo-examples/etc.jpg', alt: 'etc.kiiiosk.ru'}
+            %h6 etc.kiiiosk.ru
+          .col-lg-3.margin-bottom-md>
+            .browser
+              .browser-viewport
+                %img{src: 'images/promo-examples/naturallab.jpg', alt: 'naturallab.ru'}
+            %h6 naturallab.ru
+          .col-lg-3.margin-bottom-md>
+            .browser
+              .browser-viewport
+                %img{src: 'images/promo-examples/idealistbooks.jpg', alt: 'idealistbooks.ru'}
+            %h6 idealistbooks.ru
+        .row
+          .col-lg-3.margin-bottom-md>
+            .browser
+              .browser-viewport
+                %img{src: 'images/promo-examples/sputnik.jpg', alt: 'sputnik-bags.ru'}
+            %h6 sputnik-bags.ru
+          .col-lg-3.margin-bottom-md>
+            .browser
+              .browser-viewport
+                %img{src: 'images/promo-examples/mylk.jpg', alt: 'shop.mylkco.com'}
+            %h6 shop.mylkco.com
+          .col-lg-3.margin-bottom-md>
+            .browser
+              .browser-viewport
+                %img{src: 'images/promo-examples/saharok.jpg', alt: 'saharokstore.ru'}
+            %h6 saharokstore.ru
+          .col-lg-3.margin-bottom-md>
+            .browser
+              .browser-viewport
+                %img{src: 'images/promo-examples/mastbrothers.jpg', alt: 'mastbrothers.ru'}
+            %h6 mastbrothers.ru
+    .section.text-center
+      .container
+        .lead-icon.h3
+          %i.icon-paper-plane
+        .row
+          .col-sm-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+            %h2.section-title != 'Мы знаем, как запускать успешные <span class="text-nowrap">интернет-магазины</span>'
+        .form-flatbox
+          .row
+            .col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3.col-lg-4.col-lg-offset-4
+              %form{action: '?', method: 'post', accept-charset: 'UTF-8', novalidate: 'novalidate'}
+                %h2.form-title Регистрация
+                .form-group.form-group-first
+                  %input.form-control{type: 'text', placeholder: 'Название магазина'}
+                .form-group
+                  %input.form-control{type: 'text', placeholder: 'Ваше Имя'}
+                .form-group
+                  %input.form-control{type: 'tel', placeholder: 'Номер телефона'}
+                .form-group
+                  %input.form-control{type: 'email', placeholder: 'E-mail'}
+                .form-group.form-group-last
+                  %input.btn.btn-success.btn-block{name: 'commit', type: 'submit', value: 'Продолжить'}
+        .row
+          .col-sm-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+            %p &nbsp;
+            %p != '<span class="text-nowrap">звоните  – <a href="tel:88007755661">8 (800) 77-55-661</a></span>,</span> <span class="text-nowrap">или пишите – <a href="mailto:support@kiiiosk.ru" title="support@kiiiosk.ru">support@kiiiosk.ru</a></span>'
+    %footer.footer.bg-darkgray
+      .container
+        %ul.list-inline
+          %li
+            != 'Звоните нам &mdash;'
+            %a{href: 'tel:88007755661'} 8 (800) 77-55-661
+        %p.text-muted
+          %small &copy; Kiosk &mdash; 2015
+
+    / build:js
+    %script{src: 'scripts/vendor.js'}
+    %script{src: 'scripts/client.js'}
+    / endbuild
+    / build:counters
+    +include 'app/haml/shared/_google_analytics.html'
+    +include 'app/haml/shared/_yandex_metrica.html'
+    / endbuild
+    -# +include 'app/haml/shared/_jivosite.html'
+    +include 'app/haml/shared/_facebook_likes.html'

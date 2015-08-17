@@ -18,8 +18,6 @@
 @import "global/mixins";
 @import "global/placeholders";
 @import "global/helpers";
-
-@import "global/typography";
 @import "global/zindexes";
 
 
@@ -53,6 +51,7 @@
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/pager";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/labels";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/badges";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/jumbotron";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/thumbnails";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/alerts";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/progress-bars";
@@ -91,6 +90,13 @@
 
 
 // =====================================================================
+// Global: Other
+// =====================================================================
+
+@import "global/typography";
+
+
+// =====================================================================
 // Fonts
 // =====================================================================
 
@@ -117,6 +123,9 @@
 @import "partials/modal-tariffs";
 @import "partials/grid-table";
 @import "partials/lead-icon";
+@import "partials/jumbotron";
+@import "partials/avatar";
+@import "partials/owl-carousel2";
 
 
 // =====================================================================
