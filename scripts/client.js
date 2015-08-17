@@ -22,6 +22,19 @@ $(function() {
     autoplayTimeout: 2500,
     autoplaySpeed: 1000
   });
+  $('[ks-testimonials-slider]').owlCarousel({
+    items: 1,
+    loop: true,
+    center: true,
+    autoHeight: true,
+    dots: false,
+    nav: true,
+    navText: '',
+    autoplay: true,
+    autoplayTimeout: 2500,
+    autoplaySpeed: 1000,
+    themeClass: 'owl-theme owl-nav-arrow owl-testimonials'
+  });
   $('[ks-scrollto]').click(function() {
     var id, x, y;
     id = $(this).attr('href');

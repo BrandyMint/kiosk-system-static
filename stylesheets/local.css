@@ -5835,7 +5835,7 @@ button.close {
   font-style: normal; }
 
 /* line 14, ./app/bower_components/entypo-plus/scss/entypo-plus */
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"], .owl-nav-arrow .owl-controls .owl-nav .owl-prev, .owl-nav-arrow .owl-controls .owl-nav .owl-next, [class*=" icon-"] {
   font-family: 'entypo-plus';
   speak: none;
   font-style: normal;
@@ -6112,11 +6112,11 @@ button.close {
   content: "\e641"; }
 
 /* line 292, ./app/bower_components/entypo-plus/scss/entypo-plus */
-.icon-chevron-thin-left:before {
+.icon-chevron-thin-left:before, .owl-nav-arrow .owl-controls .owl-nav .owl-prev:before {
   content: "\e642"; }
 
 /* line 296, ./app/bower_components/entypo-plus/scss/entypo-plus */
-.icon-chevron-thin-right:before {
+.icon-chevron-thin-right:before, .owl-nav-arrow .owl-controls .owl-nav .owl-next:before {
   content: "\e643"; }
 
 /* line 300, ./app/bower_components/entypo-plus/scss/entypo-plus */
@@ -8275,42 +8275,58 @@ button.close {
   /* line 7, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
   .footer .list-inline {
     margin-top: 10px; }
+  /* line 9, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+  .footer.bg-darkgray {
+    background-color: #32383c;
+    color: #747c82; }
+    /* line 12, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+    .footer.bg-darkgray a {
+      color: #747c82; }
+      /* line 14, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+      .footer.bg-darkgray a:hover {
+        color: #c4cacf; }
 
-/* line 10, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 17, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-systems {
   background-color: #f4f6f8; }
-  /* line 12, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+  /* line 19, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
   .footer-systems .container {
     padding-top: 25px;
     padding-bottom: 25px; }
 
-/* line 16, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 23, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-socials {
   background-color: #32383c; }
 
-/* line 19, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 26, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-links {
   border-top: 1px solid #3e3e3e;
   background-color: #32383c;
   color: #747c82; }
+  /* line 30, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+  .footer-links a {
+    color: #747c82; }
+    /* line 32, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+    .footer-links a:hover {
+      color: #c4cacf; }
 
-/* line 24, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 35, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-link {
   padding: 10px;
   display: inline-block;
   color: #747c82; }
-  /* line 28, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+  /* line 39, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
   .footer-link:hover {
     color: #c4cacf;
     text-decoration: none; }
 
-/* line 32, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 43, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-payments-label {
   margin-right: 10px;
   color: #777;
   vertical-align: middle; }
 
-/* line 37, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 48, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-payment {
   background-image: url("../images/payments/sprite.png");
   margin: 15px;
@@ -8321,41 +8337,41 @@ button.close {
       background-image: url("../images/payments/sprite@2x.png");
       background-size: 86px 210px; } }
 
-/* line 43, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 54, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-payment-cloudpayments {
   width: 80px;
   height: 64px;
   background-position: 0 0; }
 
-/* line 48, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 59, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-payment-mastercard {
   width: 80px;
   height: 48px;
   background-position: 0 -69px; }
 
-/* line 53, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 64, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-payment-visa {
   width: 80px;
   height: 25px;
   background-position: 0 -122px; }
 
-/* line 58, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 69, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-payment-walletone {
   width: 59px;
   height: 50px;
   background-position: 0 -152px; }
 
-/* line 64, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 75, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-payments + .footer-integrations {
   padding-top: 10px; }
 
-/* line 67, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 78, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-integrations-label {
   margin-right: 10px;
   color: #777;
   vertical-align: middle; }
 
-/* line 72, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 83, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-integration {
   background-image: url("../images/integrations/sprite.png");
   margin: 15px;
@@ -8366,25 +8382,25 @@ button.close {
       background-image: url("../images/integrations/sprite@2x.png");
       background-size: 130px 101px; } }
 
-/* line 78, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 89, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-integration-amocrm {
   width: 105px;
   height: 21px;
   background-position: 0 0; }
 
-/* line 83, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 94, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-integration-moysklad {
   width: 125px;
   height: 31px;
   background-position: 0 -26px; }
 
-/* line 88, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 99, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-integration-1c {
   width: 78px;
   height: 35px;
   background-position: 0 -62px; }
 
-/* line 93, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 104, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-socials-list {
   margin: 0;
   padding: 0;
@@ -8392,37 +8408,37 @@ button.close {
   font-weight: 500;
   font-size: 16px; }
 
-/* line 100, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 111, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-social {
   padding: 10px;
   display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
   color: #53575a; }
-  /* line 106, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+  /* line 117, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
   .footer-social span {
     vertical-align: middle !important; }
-  /* line 108, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+  /* line 119, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
   .footer-social .fb-like {
     margin-left: 10px; }
 
-/* line 111, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 122, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-social-link {
   display: inline-block;
   color: #53575a !important; }
-  /* line 115, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+  /* line 126, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
   .footer-social-link:hover, .footer-social-link:active {
     color: #888b8d !important;
     text-decoration: none; }
-    /* line 118, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+    /* line 129, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
     .footer-social-link:hover .footer-social-icon, .footer-social-link:active .footer-social-icon {
       opacity: 0.6; }
-  /* line 120, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+  /* line 131, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
   .footer-social-link:link {
     color: #53575a;
     text-decoration: none; }
 
-/* line 124, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 135, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-social-icon {
   background-image: url("../images/socials/sprite.png");
   width: 32px;
@@ -8436,44 +8452,44 @@ button.close {
       background-image: url("../images/socials/sprite@2x.png");
       background-size: 37px 148px; } }
 
-/* line 133, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 144, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-social-icon-facebook {
   background-position: 0 0; }
 
-/* line 136, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 147, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-social-icon-instagram {
   background-position: 0 -37px; }
 
-/* line 139, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 150, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-social-icon-vkontakte {
   background-position: 0 -74px; }
 
-/* line 142, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+/* line 153, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
 .footer-social-icon-twitter {
   background-position: 0 -111px; }
 
 @media (min-width: 768px) {
-  /* line 146, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+  /* line 157, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
   .footer-social {
     padding-right: 24px;
     padding-left: 24px; } }
 
 @media (max-width: 1199px) {
-  /* line 153, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+  /* line 164, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
   .footer-socials .footer-socials {
     margin: 0 -8px; }
-  /* line 155, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+  /* line 166, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
   .footer-socials .footer-social {
     padding: 10px 14px; }
-  /* line 158, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+  /* line 169, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
   .footer-socials .footer-social-link span {
     display: none; }
-  /* line 161, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+  /* line 172, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
   .footer-socials .footer-social-icon {
     margin-right: 0; } }
 
 @media (max-width: 767px) {
-  /* line 166, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
+  /* line 177, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/footer */
   .footer-socials .footer-social {
     padding: 10px 8px; } }
 
@@ -8578,7 +8594,7 @@ button.close {
   cursor: pointer;
   transition: color 0.3s ease; }
   /* line 6, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/info-trigger */
-  .info-trigger [class^="icon-"], .info-trigger [class*=" icon-"] {
+  .info-trigger [class^="icon-"], .info-trigger .owl-nav-arrow .owl-controls .owl-nav .owl-prev, .owl-nav-arrow .owl-controls .owl-nav .info-trigger .owl-prev, .info-trigger .owl-nav-arrow .owl-controls .owl-nav .owl-next, .owl-nav-arrow .owl-controls .owl-nav .info-trigger .owl-next, .info-trigger [class*=" icon-"] {
     font-size: 1.143em;
     vertical-align: middle; }
   /* line 10, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/info-trigger */
@@ -8628,31 +8644,32 @@ button.close {
 
 /* line 1, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/jumbotron */
 .jumbotron {
-  margin-bottom: 0; }
-  /* line 3, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/jumbotron */
+  margin-bottom: 0;
+  padding-right: 15px;
+  padding-left: 15px; }
+  /* line 6, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/jumbotron */
   .jumbotron.bg-primary {
     background-color: #3c85df;
     color: #fff; }
-  /* line 6, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/jumbotron */
-  .jumbotron.bg-success {
-    background-color: #dff0d8;
-    color: #fff; }
   /* line 9, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/jumbotron */
+  .jumbotron.bg-success {
+    background-color: #dff0d8; }
+  /* line 11, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/jumbotron */
   .jumbotron.bg-info {
     background-color: #d9edf7; }
-  /* line 11, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/jumbotron */
+  /* line 13, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/jumbotron */
   .jumbotron.bg-warning {
     background-color: #fcf8e3; }
-  /* line 13, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/jumbotron */
+  /* line 15, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/jumbotron */
   .jumbotron.bg-danger {
     background-color: #f2dede; }
 
-/* line 16, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/jumbotron */
+/* line 18, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/jumbotron */
 .jumbotron-cover {
   position: relative;
   background-position: 50% 50%;
   background-size: cover; }
-  /* line 20, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/jumbotron */
+  /* line 22, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/jumbotron */
   .jumbotron-cover:before {
     content: "";
     position: absolute;
@@ -8662,17 +8679,62 @@ button.close {
     left: 0;
     background-color: #000;
     opacity: 0.68; }
-  /* line 30, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/jumbotron */
+  /* line 32, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/jumbotron */
   .jumbotron-cover .container, .jumbotron-cover .container-fluid {
     position: relative; }
 
-/* line 34, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/jumbotron */
-.bg-yellow {
-  background-color: #fffea1; }
+/* line 5, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/avatar */
+.avatar {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  display: inline-block;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle; }
 
-/* line 37, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/jumbotron */
-.bg-default {
-  background-color: #f5f5f5; }
+/* line 14, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/avatar */
+.avatar-circle {
+  border-radius: 50%; }
+
+/* line 2, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/owl-carousel2 */
+.owl-nav-arrow .owl-controls {
+  margin-top: 0; }
+  /* line 6, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/owl-carousel2 */
+  .owl-nav-arrow .owl-controls .owl-nav .owl-prev, .owl-nav-arrow .owl-controls .owl-nav .owl-next {
+    margin: -22px 0 0;
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    font-size: 36px;
+    color: inherit; }
+    /* line 13, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/owl-carousel2 */
+    .owl-nav-arrow .owl-controls .owl-nav .owl-prev:hover, .owl-nav-arrow .owl-controls .owl-nav .owl-next:hover {
+      background-color: transparent;
+      color: inherit; }
+  /* line 17, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/owl-carousel2 */
+  .owl-nav-arrow .owl-controls .owl-nav .owl-prev {
+    left: 20px; }
+  /* line 22, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/owl-carousel2 */
+  .owl-nav-arrow .owl-controls .owl-nav .owl-next {
+    right: 20px; }
+  @media (max-width: 767px) {
+    /* line 29, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/owl-carousel2 */
+    .owl-nav-arrow .owl-controls .owl-nav .owl-prev, .owl-nav-arrow .owl-controls .owl-nav .owl-next {
+      margin-top: -18px;
+      font-size: 28px; }
+    /* line 32, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/owl-carousel2 */
+    .owl-nav-arrow .owl-controls .owl-nav .owl-prev {
+      left: 0; }
+    /* line 34, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/owl-carousel2 */
+    .owl-nav-arrow .owl-controls .owl-nav .owl-next {
+      right: 0; } }
+
+/* line 41, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/owl-carousel2 */
+.owl-testimonials .owl-controls .owl-nav .owl-prev, .owl-testimonials .owl-controls .owl-nav .owl-next {
+  top: auto;
+  bottom: 72%; }
 
 /* line 1, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/pages/simple */
 .simple-page {
