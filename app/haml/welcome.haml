@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 %html
   %head
-    +include './app/haml/shared/_head_v2.haml'
+    +include './app/haml/shared/_head.haml'
 
   %body
     %header.header
@@ -16,8 +16,8 @@
       .hero
         .container
           .row
-            .col-md-8.col-md-offset-2
-              %h1.hero-title != 'Создай собственный <span class="text-nowrap">интернет-магазин</span> бесплатно'
+            .col-lg-6.col-lg-offset-3
+              %h1.hero-title != 'Удивительно быстрое создание <span class="text-nowrap">интернет-магазина</span>'
               %a.btn.btn-success.btn-reg{href: '#registration', title: 'Зарегистрироваться', ks-scrollto: true} Зарегистрироваться
         .promo-examples
           %div{ks-owl-carousel2: true}
@@ -104,12 +104,12 @@
         .container
           %h2.section-title.text-center
             Тарифы
-            %button.btn.btn-info.btn-outline.btn-border-2x.btn-sm{data: {toggle: 'modal', target: '#modal-tarrifs'}} Посмотреть все
+            %button.btn.btn-success.btn-sm{data: {toggle: 'modal', target: '#modal-tarrifs'}} Посмотреть все
           .row
             .col-sm-6.col-lg-3
               .tariff.tariff-1{data: {toggle: 'modal', target: '#modal-tarrifs'}}
                 %h3.tariff-title Тариф &laquo;Киоск&raquo;
-                .tariff-price != '750 <sup class="after">руб/мес</sup>'
+                .tariff-price != '599 <sup class="after">руб/мес</sup>'
                 .tariff-bonus
                   .tariff-bonus-label Бонус 500 руб
                 %ul.tariff-features
@@ -121,7 +121,7 @@
             .col-sm-6.col-lg-3
               .tariff.tariff-2{data: {toggle: 'modal', target: '#modal-tarrifs'}}
                 %h3.tariff-title Тариф &laquo;Магазин&raquo;
-                .tariff-price != '1 700 <sup class="after">руб/мес</sup>'
+                .tariff-price != '1 499 <sup class="after">руб/мес</sup>'
                 .tariff-bonus
                   .tariff-bonus-label Бонус 1 000 руб
                 %ul.tariff-features
@@ -133,7 +133,7 @@
             .col-sm-6.col-lg-3
               .tariff.tariff-3{data: {toggle: 'modal', target: '#modal-tarrifs'}}
                 %h3.tariff-title Тариф &laquo;Супермаркет&raquo;
-                .tariff-price != '2 800 <sup class="after">руб/мес</sup>'
+                .tariff-price != '2 999 <sup class="after">руб/мес</sup>'
                 .tariff-bonus
                   .tariff-bonus-label Бонус 2 000 руб
                 %ul.tariff-features
@@ -145,7 +145,7 @@
             .col-sm-6.col-lg-3
               .tariff.tariff-4{data: {toggle: 'modal', target: '#modal-tarrifs'}}
                 %h3.tariff-title Тариф &laquo;Гипермаркет&raquo;
-                .tariff-price != '4 700 <sup class="after">руб/мес</sup>'
+                .tariff-price != '4 999 <sup class="after">руб/мес</sup>'
                 .tariff-bonus
                   .tariff-bonus-label Бонус 6 000 руб
                 %ul.tariff-features
@@ -156,7 +156,7 @@
                       %i.icon-info-with-circle
           .row
             %p.col-md-6.col-md-offset-3.text-center.tariffs-text
-              != 'А также тарифный план &laquo;<b>Демо</b>&raquo; (бесплатный)<br /> и&nbsp;индивидуальный тарифный план &laquo;<b class="text-nowrap">Лакшери</b>&raquo;'
+              != 'А также тарифный план &laquo;<b>Демо</b>&raquo; (бесплатный)<br /> и&nbsp;&laquo;<b>Индивидуальный</b>&raquo; тарифный план'
       .start
         .container.text-center
           .row
@@ -240,7 +240,7 @@
                     %th Магазин
                     %th Супермаркет
                     %th Гипермаркет
-                    %th Лакшери
+                    %th Индивидуальный
                 %tbody
                   %tr.tariffs-table-subtitle
                     %th{colspan: 7} Основное
@@ -249,15 +249,15 @@
                     %td
                       .tariff-price != '0 <sup class="after">руб/мес</sup>'
                     %td
-                      .tariff-price != '750 <sup class="after">руб/мес</sup>'
+                      .tariff-price != '599 <sup class="after">руб/мес</sup>'
                     %td
-                      .tariff-price != '1 700 <sup class="after">руб/мес</sup>'
+                      .tariff-price != '1 499 <sup class="after">руб/мес</sup>'
                     %td
-                      .tariff-price != '2 800 <sup class="after">руб/мес</sup>'
+                      .tariff-price != '2 999 <sup class="after">руб/мес</sup>'
                     %td
-                      .tariff-price != '4 700 <sup class="after">руб/мес</sup>'
+                      .tariff-price != '4 999 <sup class="after">руб/мес</sup>'
                     %td
-                      .tariff-price != '15 000 <sup class="after">руб/мес</sup>'
+                      .tariff-price != '24 999 <sup class="after">руб/мес</sup>'
                   %tr
                     %td Подключение
                     %td -
