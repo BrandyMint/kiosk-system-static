@@ -3,7 +3,7 @@ flatten      = require 'gulp-flatten'
 handleErrors = require '../../util/handleErrors'
 config       = require('../../config').fonts.production
 
-gulp.task '[Production] fonts', ->
+gulp.task '[Production] Fonts', ->
   gulp.src config.src
     .on 'error', handleErrors
     .pipe flatten()

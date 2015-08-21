@@ -14,7 +14,12 @@ module.exports = {
     }
     files: [build + '/**']
   }
-
+  ghPages: {
+    src: build + '/**/*'
+    options: {
+      message: 'gh-pages'
+    }
+  }
   scripts: {
     local: {
       vendor: {

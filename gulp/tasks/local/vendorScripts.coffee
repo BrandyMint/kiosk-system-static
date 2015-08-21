@@ -5,7 +5,7 @@ bundleLogger   = require '../../util/bundleLogger'
 handleErrors   = require '../../util/handleErrors'
 config         = require('../../config').scripts.local.vendor
 
-gulp.task '[Local] vendorScripts', ->
+gulp.task '[Local] VendorScripts', ->
   bundler = browserify({
     cache: {}, packageCache: {}
     basedir: config.baseDir

@@ -3,7 +3,7 @@ flatten      = require 'gulp-flatten'
 handleErrors = require '../../util/handleErrors'
 config       = require('../../config').fonts.local
 
-gulp.task '[Local] fonts', ->
+gulp.task '[Local] Fonts', ->
   gulp.src config.src
     .on 'error', handleErrors
     # проверить, нужен ли flatten

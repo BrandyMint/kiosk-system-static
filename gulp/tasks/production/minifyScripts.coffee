@@ -4,7 +4,7 @@ rename       = require 'gulp-rename'
 handleErrors = require '../../util/handleErrors'
 config       = require('../../config').scripts.production.minify
 
-gulp.task '[Production] minifyScripts', ['[Production] scripts'], ->
+gulp.task '[Production] MinifyScripts', ['[Production] Scripts'], ->
   gulp.src config.src
     .pipe uglify()
     .on 'error', handleErrors
