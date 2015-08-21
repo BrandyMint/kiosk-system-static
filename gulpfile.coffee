@@ -4,11 +4,14 @@ runSequence = require 'run-sequence'
 
 requireDir './gulp/tasks', { recurse: true }
 
-gulp.task 'dist', ['[Shared] clean'], ->
-  gulp.start '[Production] minifyScripts', '[Production] minifyStyles', '[Production] fonts', '[Production] images'
+gulp.task 'dist', ['[Shared] Clean'], ->
+  gulp.start '[Production] MinifyScripts', '[Production] MinifyStyles', '[Production] Fonts', '[Production] Images'
 
-gulp.task 'build', ['[Shared] clean'], (cb) ->
-  runSequence ['[Local] vendorScripts', '[Local] clientScripts', '[Local] styles', '[Local] html', '[Local] fonts', '[Local] images', '[Local] favicons'], cb
+gulp.task 'build', ['[Shared] Clean'], (cb) ->
+  runSequence ['[Local] VendorScripts', '[Local] ClientScripts', '[Local] Styles', '[Local] Html', '[Local] Fonts', '[Local] Images', '[Local] Favicons'], cb
 
-gulp.task 'server', ['build'], ->
-  gulp.start '[Shared] watch'
+gulp.task 'deploy', ['build'], ->
+  gulp.start '[Shared] GithubPages'
+
+gulp.task 'server', ['[Shared] SetWatch', 'build'], ->
+  gulp.start '[Shared] Watch'

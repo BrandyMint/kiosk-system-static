@@ -5,7 +5,7 @@ browserSync = require 'browser-sync'
 config      = require('../../config').html.local
 reload      = browserSync.reload
 
-gulp.task '[Local] html', ->
+gulp.task '[Local] Html', ->
   gulp.src config.src
     .pipe haml()
     .pipe htmlreplace config.replace, keepUnassigned: true

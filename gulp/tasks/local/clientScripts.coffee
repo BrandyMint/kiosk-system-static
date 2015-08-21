@@ -6,7 +6,7 @@ bundleLogger   = require '../../util/bundleLogger'
 handleErrors   = require '../../util/handleErrors'
 config         = require('../../config').scripts.local.client
 
-gulp.task '[Local] clientScripts', ->
+gulp.task '[Local] ClientScripts', ->
   bundler = browserify({
     cache: {}, packageCache: {}
     entries: config.entries
@@ -33,7 +33,8 @@ gulp.task '[Local] clientScripts', ->
              .on 'end', ->
                bundleLogger.end config.outputName
 
-  bundler = watchify bundler
-  bundler.on 'update', bundle
+  if global.isWatching
+    bundler = watchify bundler
+    bundler.on 'update', bundle
 
   return bundle()

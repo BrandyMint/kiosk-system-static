@@ -5,7 +5,7 @@ rename       = require 'gulp-rename'
 handleErrors = require '../../util/handleErrors'
 config       = require('../../config').styles.sass.local
 
-gulp.task '[Local] styles', ->
+gulp.task '[Local] Styles', ->
   gulp.src config.src
     .pipe sass config.options
     .on 'error', handleErrors
