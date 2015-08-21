@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+%html
+  %head
+    +include './app/haml/shared/_head.haml'
+
+  %body
+    %header.header
+      %nav.navbar
+        .container
+          %a.navbar-brand{href: 'welcome.html'}
+            %span.navbar-logo Киоск
+          %a.btn.btn-sm.btn-default.btn-outline.navbar-btn.pull-right{href: '/login'}
+            != 'Вход<span class="hidden-xs hidden-sm"> для магазинов</span>'
+          %p.navbar-text.navbar-right.text-right.text-nowrap
+            != '<span class="hidden-xs hidden-sm text-muted">звоните – </span><a href="tel:88007755661">8 (800) 77-55-661</a>'
+    %body
+      .section.bg-info.text-center
+        .container.margin-bottom-md
+          .lead-icon.h3
+            %i.icon-briefcase
+          %h2.section-title Примеры
+          %p Взгляните на эту красоту и Вы захотите такой же интернет-магазин
+        - examples = [{title: 'wanna-be.ru', image_url: 'images/promo-examples/wanna-be.jpg', home_url: 'http://wanna-be.ru'}, {title: 'etc.kiiiosk.ru', image_url: 'images/promo-examples/etc.jpg', home_url: 'http://etc.kiiiosk.ru'}, {title: 'naturallab.ru', image_url: 'images/promo-examples/naturallab.jpg', home_url: 'http://naturallab.ru'}, {title: 'idealistbooks.ru', image_url: 'images/promo-examples/idealistbooks.jpg', home_url: 'http://idealistbooks.ru'}, {title: 'sputnik-bags.ru', image_url: 'images/promo-examples/sputnik.jpg', home_url: 'http://sputnik-bags.ru'}, {title: 'shop.mylkco.com', image_url: 'images/promo-examples/mylk.jpg', home_url: 'http://shop.mylkco.com'}, {title: 'saharokstore.ru', image_url: 'images/promo-examples/saharok.jpg', home_url: 'http://saharokstore.ru'}, {title: 'mastbrothers.ru', image_url: 'images/promo-examples/mastbrothers.jpg', home_url: 'http://mastbrothers.ru'}]
+        .container
+          .row
+            - for example of examples
+              - example = examples[example]
+              .col-lg-3.margin-bottom-md>
+                .browser
+                  .browser-viewport
+                    %img{src: example.image_url, alt: example.title}
+                %h6= example.title
+    %footer.footer
+      .footer-systems
+        .container
+          .footer-payments
+            %span.footer-payments-label Мы принимаем платежи
+            %span.footer-payment.footer-payment-cloudpayments
+            %span.footer-payment.footer-payment-mastercard
+            %span.footer-payment.footer-payment-visa
+            %span.footer-payment.footer-payment-walletone
+          .footer-integrations
+            %span.footer-integrations-label Мы интегрировали
+            %span.footer-integration.footer-integration-amocrm
+            %span.footer-integration.footer-integration-moysklad
+            %span.footer-integration.footer-integration-1c
+      .footer-socials
+        .container
+          %ul.footer-socials-list
+            %li.footer-social
+              %a.footer-social-link{href: 'https://www.facebook.com/kiiiosk.ru', title: 'Facebook', target: '_blank'}
+                %i.footer-social-icon.footer-social-icon-facebook>
+                %span Facebook
+              .fb-like{data: {href: 'https://www.facebook.com/kiiiosk.ru', layout: 'button_count', action: 'like', 'show-faces': false, share: 'false'}
+            %li.footer-social
+              %a.footer-social-link{href: 'https://instagram.com/kiiiosk/', title: 'Instagram', target: '_blank'}
+                %i.footer-social-icon.footer-social-icon-instagram>
+                %span Instagram
+            %li.footer-social
+              %a.footer-social-link{href: 'https://vk.com/kiiiosk', title: 'Вконтакте', target: '_blank'}
+                %i.footer-social-icon.footer-social-icon-vkontakte>
+                %span Вконтакте
+            %li.footer-social
+              %a.footer-social-link{href: 'https://twitter.com/@kiiiosk_ru', title: 'Twitter', target: '_blank'}
+                %i.footer-social-icon.footer-social-icon-twitter>
+                %span Twitter
+      .footer-links
+        .container
+          %a.footer-link{href: '/prices', title: 'Тарифы'} Тарифы
+          %a.footer-link{href: '/rules', title: 'Правила e-commerce'} Правила e-commerce
+          %a.footer-link{href: '/offer', title: 'Оферта'} Оферта
+          %a.footer-link{href: '/job', title: 'Вакансии'} Вакансии
+
+    / build:js
+    %script{src: 'scripts/vendor.js'}
+    %script{src: 'scripts/client.js'}
+    / endbuild
+    / build:counters
+    +include 'app/haml/shared/_google_analytics.html'
+    +include 'app/haml/shared/_yandex_metrica.html'
+    / endbuild
+    -# +include 'app/haml/shared/_jivosite.html'
+    +include 'app/haml/shared/_facebook_likes.html'
