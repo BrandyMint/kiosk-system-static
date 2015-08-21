@@ -8055,19 +8055,19 @@ h6, .h6 {
 
 /* line 26, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
 .tariff-1 {
-  border-top: 6px solid #ade9cd; }
+  border-top: 6px solid #afefaf; }
 
 /* line 28, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
 .tariff-2 {
-  border-top: 6px solid #90e1bc; }
+  border-top: 6px solid #96e096; }
 
 /* line 30, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
 .tariff-3 {
-  border-top: 6px solid #6ed9a8; }
+  border-top: 6px solid #7ed07e; }
 
 /* line 32, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
 .tariff-4 {
-  border-top: 6px solid #31c983; }
+  border-top: 6px solid #5cb85c; }
 
 /* line 35, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
 .tariff-icon-tick {
@@ -8208,65 +8208,66 @@ h6, .h6 {
 
 /* line 151, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
 .tariffs-table-subtitle th {
+  font-weight: 500;
   font-size: 10px;
   border-bottom: none;
   background-color: #f4f4f4;
   color: #8f8f8f; }
 
 @media (max-width: 767px) {
-  /* line 160, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
+  /* line 161, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
   .tariffs-table td:first-child {
     font-size: 0.857em; } }
 
 @media (min-width: 768px) {
-  /* line 164, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
+  /* line 165, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
   .tariff {
     padding-right: 40px;
     padding-left: 40px; }
-  /* line 169, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
+  /* line 170, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
   .tariff-title, .tariff-price {
     margin-bottom: 30px; }
-  /* line 171, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
+  /* line 172, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
   .tariff-price {
     font-size: 64px; }
-    /* line 173, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
+    /* line 174, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
     .tariff-price sup {
       top: 0.4em; }
-      /* line 175, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
+      /* line 176, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
       .tariff-price sup.before {
         left: -24px; }
-    /* line 177, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
+    /* line 178, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
     .tariff-price + .tariff-bonus {
       margin-top: -20px;
       margin-bottom: 30px; }
-  /* line 182, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
+  /* line 183, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
   .tariffs-table td {
     min-width: 140px; } }
 
 @media (min-width: 1200px) {
-  /* line 186, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
+  /* line 187, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
   .tariff {
     padding-right: 26px;
     padding-left: 26px; }
-  /* line 190, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
+  /* line 191, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
   .tariff-title {
     font-size: 1.286em; }
-  /* line 193, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
+  /* line 194, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
   .tariff-title, .tariff-price {
     margin-bottom: 30px; }
-  /* line 195, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
+  /* line 196, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
   .tariff-price {
     font-size: 42px; }
-    /* line 197, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
+    /* line 198, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
     .tariff-price sup {
       top: 0.1em; }
-  /* line 200, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
+  /* line 201, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
   .tariffs-table {
     font-size: 1em; }
-    /* line 202, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
+    /* line 203, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
     .tariffs-table td {
       min-width: 198px; }
-      /* line 204, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
+      /* line 205, /Users/volosojui/code/projects/kiosk/git/kiosk-system-static/app/stylesheets/sass/partials/tariffs */
       .tariffs-table td:first-child {
         padding-right: 30px;
         padding-left: 30px; } }
