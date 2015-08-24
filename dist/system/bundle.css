@@ -6804,6 +6804,11 @@ h6, .h6 {
   top: auto;
   bottom: 72%; }
 
+.embed-container {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto; }
+
 .simple-page {
   position: fixed;
   top: 0;
