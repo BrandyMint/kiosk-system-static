@@ -6663,12 +6663,22 @@ h6, .h6 {
   text-align: center; }
   .form-flatbox .alert {
     margin-bottom: 50px;
-    border-color: #f6584f;
-    background: none;
-    color: #f6584f; }
+    background: none; }
     .form-flatbox .alert a {
       font-weight: bold;
       color: inherit; }
+  .form-flatbox .alert-success {
+    border-color: #5cb85c;
+    color: #5cb85c; }
+  .form-flatbox .alert-info {
+    border-color: #62b6ff;
+    color: #62b6ff; }
+  .form-flatbox .alert-warning {
+    border-color: #ffb347;
+    color: #ffb347; }
+  .form-flatbox .alert-error, .form-flatbox .alert-danger {
+    border-color: #f6584f;
+    color: #f6584f; }
   .form-flatbox .form-note {
     margin-bottom: 35px; }
   .form-flatbox .form-group {
