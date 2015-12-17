@@ -6197,13 +6197,11 @@ h6, .h6 {
       display: inline-block;
       background-color: #555;
       -webkit-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
               transform: rotate(45deg); }
   .features-item-figure {
     margin-top: -80px;
     margin-bottom: -10px;
     -webkit-transform: scale(0.6);
-        -ms-transform: scale(0.6);
             transform: scale(0.6); } }
 
 .tariffs {
@@ -6225,7 +6223,6 @@ h6, .h6 {
   border-radius: 5px;
   cursor: pointer;
   -webkit-transform: scale(1);
-      -ms-transform: scale(1);
           transform: scale(1);
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
@@ -6233,7 +6230,6 @@ h6, .h6 {
           backface-visibility: hidden; }
   .tariff:hover {
     -webkit-transform: scale(1.04);
-        -ms-transform: scale(1.04);
             transform: scale(1.04); }
 
 .tariff-1 {
