@@ -1,4 +1,6 @@
 require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+var calcOfferHeight;
+
 require('./libs');
 
 require('./routes/routes');
@@ -6,6 +8,17 @@ require('./routes/routes');
 require('./react/components/callback_form/callback_form');
 
 window.ReactUjs.initialize();
+
+calcOfferHeight = function() {
+  var $el, fheigth, hHeigth, wHeigth;
+  wHeigth = $(window).height();
+  hHeigth = $('header').height();
+  fheigth = $('footer').height();
+  $el = $('object[type="application/pdf"]');
+  if ($el.length) {
+    return $el.height(wHeigth - hHeigth - fheigth);
+  }
+};
 
 $(function() {
   $('[ks-owl-carousel2]').owlCarousel({
@@ -44,11 +57,13 @@ $(function() {
     });
     return false;
   });
-  return $('[ks-popover-trigger]').popover({
+  $('[ks-popover-trigger]').popover({
     container: 'body',
     placement: 'top',
     trigger: 'hover'
   });
+  $(window).on('resize', calcOfferHeight);
+  return calcOfferHeight();
 });
 
 
@@ -93,7 +108,7 @@ window.accounting.settings = {
 
 
 
-},{"accounting":"accounting","bootstrapSass":"bootstrapSass","eventEmitter":"eventEmitter","flux":5,"jquery":"jquery","jquery.scrollTo":"jquery.scrollTo","lodash":"lodash","owlCarousel2":"owlCarousel2","react":"react","react-mixin-manager":"react-mixin-manager","reactUjs":"reactUjs"}],3:[function(require,module,exports){
+},{"accounting":"accounting","bootstrapSass":"bootstrapSass","eventEmitter":"eventEmitter","flux":6,"jquery":"jquery","jquery.scrollTo":"jquery.scrollTo","lodash":"lodash","owlCarousel2":"owlCarousel2","react":"react","react-mixin-manager":"react-mixin-manager","reactUjs":"reactUjs"}],3:[function(require,module,exports){
 
 /** @jsx React.DOM */
 var CallbackForm_Mixin, ERROR_MESSAGE, ERROR_STATE, INPUT_PLACEHOLDER, INPUT_STATE, KEYCODE_ENTER, OPEN_BUTTON_FULL_TEXT, OPEN_BUTTON_SHORT_TEXT, SEND_MESSAGE, SEND_STATE, SHOW_STATE, SUBMIT_BUTTON_TEXT, SUCCESS_MESSAGE, SUCCESS_STATE;
@@ -322,6 +337,58 @@ window.CallbackForm_Error = React.createClass({displayName: 'CallbackForm_Error'
 
 
 },{}],5:[function(require,module,exports){
+(function (process){
+/**
+ * Copyright 2013-2015, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * @providesModule invariant
+ */
+
+"use strict";
+
+/**
+ * Use invariant() to assert state which your program assumes to be true.
+ *
+ * Provide sprintf-style format (only %s is supported) and arguments
+ * to provide information about what broke and what you were
+ * expecting.
+ *
+ * The invariant message will be stripped in production, but the invariant
+ * will remain to ensure logic does not differ in production.
+ */
+
+var invariant = function (condition, format, a, b, c, d, e, f) {
+  if (process.env.NODE_ENV !== 'production') {
+    if (format === undefined) {
+      throw new Error('invariant requires an error message argument');
+    }
+  }
+
+  if (!condition) {
+    var error;
+    if (format === undefined) {
+      error = new Error('Minified exception occurred; use the non-minified dev environment ' + 'for the full error message and additional helpful warnings.');
+    } else {
+      var args = [a, b, c, d, e, f];
+      var argIndex = 0;
+      error = new Error('Invariant Violation: ' + format.replace(/%s/g, function () {
+        return args[argIndex++];
+      }));
+    }
+
+    error.framesToPop = 1; // we don't care about invariant's own frame
+    throw error;
+  }
+};
+
+module.exports = invariant;
+}).call(this,require('_process'))
+},{"_process":8}],6:[function(require,module,exports){
 /**
  * Copyright (c) 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -331,11 +398,12 @@ window.CallbackForm_Error = React.createClass({displayName: 'CallbackForm_Error'
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-module.exports.Dispatcher = require('./lib/Dispatcher')
+module.exports.Dispatcher = require('./lib/Dispatcher');
 
-},{"./lib/Dispatcher":6}],6:[function(require,module,exports){
-/*
- * Copyright (c) 2014, Facebook, Inc.
+},{"./lib/Dispatcher":7}],7:[function(require,module,exports){
+(function (process){
+/**
+ * Copyright (c) 2014-2015, Facebook, Inc.
  * All rights reserved.
  *
  * This source code is licensed under the BSD-style license found in the
@@ -343,14 +411,18 @@ module.exports.Dispatcher = require('./lib/Dispatcher')
  * of patent rights can be found in the PATENTS file in the same directory.
  *
  * @providesModule Dispatcher
- * @typechecks
+ * 
+ * @preventMunge
  */
 
-"use strict";
+'use strict';
 
-var invariant = require('./invariant');
+exports.__esModule = true;
 
-var _lastID = 1;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+var invariant = require('fbjs/lib/invariant');
+
 var _prefix = 'ID_';
 
 /**
@@ -400,7 +472,7 @@ var _prefix = 'ID_';
  *
  * This payload is digested by both stores:
  *
- *    CountryStore.dispatchToken = flightDispatcher.register(function(payload) {
+ *   CountryStore.dispatchToken = flightDispatcher.register(function(payload) {
  *     if (payload.actionType === 'country-update') {
  *       CountryStore.country = payload.selectedCountry;
  *     }
@@ -428,14 +500,10 @@ var _prefix = 'ID_';
  *     flightDispatcher.register(function(payload) {
  *       switch (payload.actionType) {
  *         case 'country-update':
+ *         case 'city-update':
  *           flightDispatcher.waitFor([CityStore.dispatchToken]);
  *           FlightPriceStore.price =
  *             getFlightPriceStore(CountryStore.country, CityStore.city);
- *           break;
- *
- *         case 'city-update':
- *           FlightPriceStore.price =
- *             FlightPriceStore(CountryStore.country, CityStore.city);
  *           break;
  *     }
  *   });
@@ -445,131 +513,109 @@ var _prefix = 'ID_';
  * `FlightPriceStore`.
  */
 
+var Dispatcher = (function () {
   function Dispatcher() {
-    this.$Dispatcher_callbacks = {};
-    this.$Dispatcher_isPending = {};
-    this.$Dispatcher_isHandled = {};
-    this.$Dispatcher_isDispatching = false;
-    this.$Dispatcher_pendingPayload = null;
+    _classCallCheck(this, Dispatcher);
+
+    this._callbacks = {};
+    this._isDispatching = false;
+    this._isHandled = {};
+    this._isPending = {};
+    this._lastID = 1;
   }
 
   /**
    * Registers a callback to be invoked with every dispatched payload. Returns
    * a token that can be used with `waitFor()`.
-   *
-   * @param {function} callback
-   * @return {string}
    */
-  Dispatcher.prototype.register=function(callback) {
-    var id = _prefix + _lastID++;
-    this.$Dispatcher_callbacks[id] = callback;
+
+  Dispatcher.prototype.register = function register(callback) {
+    var id = _prefix + this._lastID++;
+    this._callbacks[id] = callback;
     return id;
   };
 
   /**
    * Removes a callback based on its token.
-   *
-   * @param {string} id
    */
-  Dispatcher.prototype.unregister=function(id) {
-    invariant(
-      this.$Dispatcher_callbacks[id],
-      'Dispatcher.unregister(...): `%s` does not map to a registered callback.',
-      id
-    );
-    delete this.$Dispatcher_callbacks[id];
+
+  Dispatcher.prototype.unregister = function unregister(id) {
+    !this._callbacks[id] ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Dispatcher.unregister(...): `%s` does not map to a registered callback.', id) : invariant(false) : undefined;
+    delete this._callbacks[id];
   };
 
   /**
    * Waits for the callbacks specified to be invoked before continuing execution
    * of the current callback. This method should only be used by a callback in
    * response to a dispatched payload.
-   *
-   * @param {array<string>} ids
    */
-  Dispatcher.prototype.waitFor=function(ids) {
-    invariant(
-      this.$Dispatcher_isDispatching,
-      'Dispatcher.waitFor(...): Must be invoked while dispatching.'
-    );
+
+  Dispatcher.prototype.waitFor = function waitFor(ids) {
+    !this._isDispatching ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Dispatcher.waitFor(...): Must be invoked while dispatching.') : invariant(false) : undefined;
     for (var ii = 0; ii < ids.length; ii++) {
       var id = ids[ii];
-      if (this.$Dispatcher_isPending[id]) {
-        invariant(
-          this.$Dispatcher_isHandled[id],
-          'Dispatcher.waitFor(...): Circular dependency detected while ' +
-          'waiting for `%s`.',
-          id
-        );
+      if (this._isPending[id]) {
+        !this._isHandled[id] ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Dispatcher.waitFor(...): Circular dependency detected while ' + 'waiting for `%s`.', id) : invariant(false) : undefined;
         continue;
       }
-      invariant(
-        this.$Dispatcher_callbacks[id],
-        'Dispatcher.waitFor(...): `%s` does not map to a registered callback.',
-        id
-      );
-      this.$Dispatcher_invokeCallback(id);
+      !this._callbacks[id] ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Dispatcher.waitFor(...): `%s` does not map to a registered callback.', id) : invariant(false) : undefined;
+      this._invokeCallback(id);
     }
   };
 
   /**
    * Dispatches a payload to all registered callbacks.
-   *
-   * @param {object} payload
    */
-  Dispatcher.prototype.dispatch=function(payload) {
-    invariant(
-      !this.$Dispatcher_isDispatching,
-      'Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch.'
-    );
-    this.$Dispatcher_startDispatching(payload);
+
+  Dispatcher.prototype.dispatch = function dispatch(payload) {
+    !!this._isDispatching ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch.') : invariant(false) : undefined;
+    this._startDispatching(payload);
     try {
-      for (var id in this.$Dispatcher_callbacks) {
-        if (this.$Dispatcher_isPending[id]) {
+      for (var id in this._callbacks) {
+        if (this._isPending[id]) {
           continue;
         }
-        this.$Dispatcher_invokeCallback(id);
+        this._invokeCallback(id);
       }
     } finally {
-      this.$Dispatcher_stopDispatching();
+      this._stopDispatching();
     }
   };
 
   /**
    * Is this Dispatcher currently dispatching.
-   *
-   * @return {boolean}
    */
-  Dispatcher.prototype.isDispatching=function() {
-    return this.$Dispatcher_isDispatching;
+
+  Dispatcher.prototype.isDispatching = function isDispatching() {
+    return this._isDispatching;
   };
 
   /**
    * Call the callback stored with the given id. Also do some internal
    * bookkeeping.
    *
-   * @param {string} id
    * @internal
    */
-  Dispatcher.prototype.$Dispatcher_invokeCallback=function(id) {
-    this.$Dispatcher_isPending[id] = true;
-    this.$Dispatcher_callbacks[id](this.$Dispatcher_pendingPayload);
-    this.$Dispatcher_isHandled[id] = true;
+
+  Dispatcher.prototype._invokeCallback = function _invokeCallback(id) {
+    this._isPending[id] = true;
+    this._callbacks[id](this._pendingPayload);
+    this._isHandled[id] = true;
   };
 
   /**
    * Set up bookkeeping needed when dispatching.
    *
-   * @param {object} payload
    * @internal
    */
-  Dispatcher.prototype.$Dispatcher_startDispatching=function(payload) {
-    for (var id in this.$Dispatcher_callbacks) {
-      this.$Dispatcher_isPending[id] = false;
-      this.$Dispatcher_isHandled[id] = false;
+
+  Dispatcher.prototype._startDispatching = function _startDispatching(payload) {
+    for (var id in this._callbacks) {
+      this._isPending[id] = false;
+      this._isHandled[id] = false;
     }
-    this.$Dispatcher_pendingPayload = payload;
-    this.$Dispatcher_isDispatching = true;
+    this._pendingPayload = payload;
+    this._isDispatching = true;
   };
 
   /**
@@ -577,68 +623,104 @@ var _prefix = 'ID_';
    *
    * @internal
    */
-  Dispatcher.prototype.$Dispatcher_stopDispatching=function() {
-    this.$Dispatcher_pendingPayload = null;
-    this.$Dispatcher_isDispatching = false;
+
+  Dispatcher.prototype._stopDispatching = function _stopDispatching() {
+    delete this._pendingPayload;
+    this._isDispatching = false;
   };
 
+  return Dispatcher;
+})();
 
 module.exports = Dispatcher;
+}).call(this,require('_process'))
+},{"_process":8,"fbjs/lib/invariant":5}],8:[function(require,module,exports){
+// shim for using process in browser
 
-},{"./invariant":7}],7:[function(require,module,exports){
-/**
- * Copyright (c) 2014, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * @providesModule invariant
- */
+var process = module.exports = {};
 
-"use strict";
+process.nextTick = (function () {
+    var canSetImmediate = typeof window !== 'undefined'
+    && window.setImmediate;
+    var canMutationObserver = typeof window !== 'undefined'
+    && window.MutationObserver;
+    var canPost = typeof window !== 'undefined'
+    && window.postMessage && window.addEventListener
+    ;
 
-/**
- * Use invariant() to assert state which your program assumes to be true.
- *
- * Provide sprintf-style format (only %s is supported) and arguments
- * to provide information about what broke and what you were
- * expecting.
- *
- * The invariant message will be stripped in production, but the invariant
- * will remain to ensure logic does not differ in production.
- */
-
-var invariant = function(condition, format, a, b, c, d, e, f) {
-  if (false) {
-    if (format === undefined) {
-      throw new Error('invariant requires an error message argument');
-    }
-  }
-
-  if (!condition) {
-    var error;
-    if (format === undefined) {
-      error = new Error(
-        'Minified exception occurred; use the non-minified dev environment ' +
-        'for the full error message and additional helpful warnings.'
-      );
-    } else {
-      var args = [a, b, c, d, e, f];
-      var argIndex = 0;
-      error = new Error(
-        'Invariant Violation: ' +
-        format.replace(/%s/g, function() { return args[argIndex++]; })
-      );
+    if (canSetImmediate) {
+        return function (f) { return window.setImmediate(f) };
     }
 
-    error.framesToPop = 1; // we don't care about invariant's own frame
-    throw error;
-  }
+    var queue = [];
+
+    if (canMutationObserver) {
+        var hiddenDiv = document.createElement("div");
+        var observer = new MutationObserver(function () {
+            var queueList = queue.slice();
+            queue.length = 0;
+            queueList.forEach(function (fn) {
+                fn();
+            });
+        });
+
+        observer.observe(hiddenDiv, { attributes: true });
+
+        return function nextTick(fn) {
+            if (!queue.length) {
+                hiddenDiv.setAttribute('yes', 'no');
+            }
+            queue.push(fn);
+        };
+    }
+
+    if (canPost) {
+        window.addEventListener('message', function (ev) {
+            var source = ev.source;
+            if ((source === window || source === null) && ev.data === 'process-tick') {
+                ev.stopPropagation();
+                if (queue.length > 0) {
+                    var fn = queue.shift();
+                    fn();
+                }
+            }
+        }, true);
+
+        return function nextTick(fn) {
+            queue.push(fn);
+            window.postMessage('process-tick', '*');
+        };
+    }
+
+    return function nextTick(fn) {
+        setTimeout(fn, 0);
+    };
+})();
+
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
 };
 
-module.exports = invariant;
+// TODO(shtylman)
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
 
 },{}],"accounting":[function(require,module,exports){
 /*!
@@ -3644,7 +3726,7 @@ module.exports = invariant;
  * http://flesler.blogspot.com/2007/10/jqueryscrollto.html
  * @projectDescription Lightweight, cross-browser and highly customizable animated scrolling with jQuery
  * @author Ariel Flesler
- * @version 2.1.1
+ * @version 2.1.2
  */
 ;(function(factory) {
 	'use strict';
@@ -3722,9 +3804,9 @@ module.exports = invariant;
 					}
 					// Relative/Absolute selector
 					targ = win ? $(targ) : $(targ, elem);
-					if (!targ.length) return;
 					/* falls through */
 				case 'object':
+					if (targ.length === 0) return;
 					// DOMElement / jQuery
 					if (targ.is || targ.style) {
 						// Get the real position of the target

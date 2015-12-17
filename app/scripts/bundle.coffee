@@ -5,6 +5,14 @@ require './react/components/callback_form/callback_form'
 
 window.ReactUjs.initialize()
 
+calcOfferHeight = ->
+  wHeigth = $(window).height()
+  hHeigth = $('header').height()
+  fheigth = $('footer').height()
+  $el = $('object[type="application/pdf"]')
+
+  $el.height(wHeigth - hHeigth - fheigth) if $el.length
+
 $ ->
   $('[ks-owl-carousel2]').owlCarousel
     loop: true
@@ -46,3 +54,6 @@ $ ->
     container: 'body'
     placement: 'top'
     trigger:   'hover'
+
+  $(window).on('resize', calcOfferHeight)
+  calcOfferHeight()
