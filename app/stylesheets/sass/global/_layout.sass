@@ -1,0 +1,27 @@
+$footer-height: 223px
+$footer-sm-height: 275px
+$footer-xs-height: 314px
+$footer-sm-break: 563px
+$footer-xs-break: 514px
+$footer-gap: 40px
+
+html
+  position: relative
+  min-height: 100%
+
+body
+  margin-bottom: $footer-height + $footer-gap
+  @media (max-width: $footer-sm-break)
+    margin-bottom: $footer-sm-height + $footer-gap
+  @media (max-width: $footer-xs-break)
+    margin-bottom: $footer-xs-height + $footer-gap
+
+.footer
+  position: absolute
+  width: 100%
+  bottom: 0
+  height: $footer-height
+  @media (max-width: $footer-sm-break)
+    height: $footer-sm-height
+  @media (max-width: $footer-xs-break)
+    height: $footer-xs-height
